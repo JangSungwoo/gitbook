@@ -25,9 +25,13 @@ XML레이아웃에는 버튼이 태그형식되어있고  버튼을 사용하기
 
 1. 우선 부분화면을 구현하기 위해서는 FrameLayout을 사용하고 id를 설정해준다.
 2. findViewById 메소드로 FrameLayout의  id값에 해당하는 View를 가져온다.
-3. LayoutInflater는 
+3. getSystemService\(\)를 통해 인스턴스화 된 서비스를 LayoutInflater의 객체\(layoutInflater\)로 받는다.
 
+* getSystemService\(Context.LAYOUT\_INFLATER\_SERVICE\)대신 getIayoutInflater\(\), LayoutInflator.form\(getApplicationContext\(\)\) 으로 가능하다.
 
+   4. layoutInflater는 inflate 메소드를 통해 지정된 layout을 FrameLayout의 자식뷰 적용시킨다. 
+
+   5. 버튼클릭을 통해 부분화면을 추가 및 삭제 되는것을 확인할 수 있다.
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
@@ -35,18 +39,26 @@ XML레이아웃에는 버튼이 태그형식되어있고  버튼을 사용하기
 public class MainActivity extends AppCompatActivity {
 
     FrameLayout container;
+    LayoutInflater layoutInflater;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         container = findViewById(R.id.container);
-        Button button = (Button) findViewById(R.id.btn1);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button btnShow = (Button) findViewById(R.id.btnShow);
+        btnShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                inflater.inflate(R.layout.sub1,container,true);
+                layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                layoutInflater.inflate(R.layout.sub1,container,true);
+            }
+        });
+        Button btnHide = (Button) findViewById(R.id.btnHide);
+        btnHide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                container.removeAllViews();
             }
         });
     }
@@ -109,7 +121,9 @@ public class MainActivity extends AppCompatActivity {
 
 {% hint style="info" %}
 [getSystemService\(\)](https://developer.android.com/reference/android/content/Context.html#getSystemService%28java.lang.String%29) 는 원하는 서비스를 불러오는 메소드이다.
+
+공식문서의 getSystemService\(\) 설명에서 서비스의 종류를 확인할 수 있다.
 {% endhint %}
 
-![](../.gitbook/assets/inflation.gif)
+![](../.gitbook/assets/inflation%20%281%29.gif)
 
