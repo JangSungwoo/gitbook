@@ -27,7 +27,19 @@ XML레이아웃에는 버튼이 태그형식되어있고  버튼을 사용하기
 2. findViewById 메소드로 FrameLayout의  id값에 해당하는 View를 가져온다.
 3. getSystemService\(\)를 통해 인스턴스화 된 서비스를 LayoutInflater의 객체\(layoutInflater\)로 받는다.
 
-* getSystemService\(Context.LAYOUT\_INFLATER\_SERVICE\)대신 getIayoutInflater\(\), LayoutInflator.form\(getApplicationContext\(\)\) 으로 가능하다.
+```text
+layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+```
+
+```text
+layoutInflater = getLayoutInflater();
+```
+
+```text
+layoutInflater = LayoutInflater.from(getApplicationContext());
+```
+
+getSystemService\(Context.LAYOUT\_INFLATER\_SERVICE\)대신 getIayoutInflater\(\), LayoutInflator.form\(getApplicationContext\(\)\) 으로 가능하다.
 
    4. layoutInflater는 inflate 메소드를 통해 지정된 layout을 FrameLayout의 자식뷰 적용시킨다. 
 
@@ -126,4 +138,10 @@ public class MainActivity extends AppCompatActivity {
 {% endhint %}
 
 ![](../.gitbook/assets/inflation%20%281%29.gif)
+
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17056/" %}
+
+{% embed url="https://developer.android.com/reference/android/view/LayoutInflater" %}
+
+
 
