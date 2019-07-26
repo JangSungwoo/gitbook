@@ -8,15 +8,13 @@ description: '#부스트코스'
 
 ![](../.gitbook/assets/listview.png)
 
-리스트뷰를 구현하기 위한 과정을 간략하게 그림으로 표현을 해보았다. 
+위의 그림은 참고하여 아래의 절차에 따라 리스트뷰를 이해해보자.
 
-간단히 설명을 하자면
-
-1. 리스트뷰는 각 아이템을 개별적으로 표현을 하기위해서는 Adapter를 사용해야한다.
-2. Adapter 내에서는 getview 메소드를 통해 각 아이템의 값들을 설정해줄 수 있다.
-3. getview 메소드에서는 아이템을 위한 뷰\(ItemView\)를 통해 Item과 레이아웃 계층뷰를 만든다.\(inflation\)  
-4. 5. 
 ## 1\) 아이템을 위한 XML 레이아웃을 정의
+
+우선 리스트뷰는 일반적으로 동일한 레이아웃을 사용하므로 반복적으로 사용할 아이템의 레이아웃을 정의해야한다. 아래의 코드는 아래의 사진\(아이템 레이아웃\)과 같이 이미지, 이름, 전화번호로 구성된다. 각 속성들은 아이템을 위한 뷰정의할 때 사용되므로 잘 기억해 두어야한다. 
+
+![&#xC544;&#xC774;&#xD15C; &#xB808;&#xC774;&#xC544;&#xC6C3;](../.gitbook/assets/image%20%287%29.png)
 
 {% code-tabs %}
 {% code-tabs-item title="singer\_item.xml" %}
@@ -64,6 +62,16 @@ description: '#부스트코스'
 
 ## 2\) 아이템을 위한 뷰 정의
 
+리스트뷰에 들어갈 각 아이템은 하나의 뷰로 정의되어야 한다. 또한 이 뷰는 여러개의 뷰를 담고 있는 뷰 그룹이어야 한다. 그러므로 인플레이션을 통해 뷰 계층구조가 만들어져야 한다.
+
+![](../.gitbook/assets/viewgroup.png)
+
+{% hint style="info" %}
+인플레이션에 대한 정보는 다음 페이지를 참고하자.
+
+{% page-ref page="inflation.md" %}
+{% endhint %}
+
 ```java
 public class SingerItemView extends LinearLayout {
 
@@ -101,6 +109,8 @@ public class SingerItemView extends LinearLayout {
 
 
 ## 3\) 어댑터 정의
+
+리스트뷰의 데이터 관리를 위해서는 어댑터가 필요하다. 각 아이템을 속성들을 설정하기 위해서는 getView 메소드를 사용한다. 다음 예제에서는 name, mobile 속을 설정하고 있다. getView를 통해 반환된 view 값은 리스트뷰에서 adapter를 설정할 때 적용된다.
 
 {% code-tabs %}
 {% code-tabs-item title="SingerAdapter.java" %}

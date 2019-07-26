@@ -8,7 +8,7 @@ description: '#부스트코스'
 >
 > #### 이미지가 줄어들거나 늘어날때 이미지의 왜곡을 해결하는 방법
 
-![&#xC0AC;&#xC9C4;1 - 9Patch](../.gitbook/assets/image%20%288%29.png)
+![&#xC0AC;&#xC9C4;1 - 9Patch](../.gitbook/assets/image%20%289%29.png)
 
 ```text
 <Button
