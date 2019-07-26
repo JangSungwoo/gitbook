@@ -110,7 +110,7 @@ public class SingerItemView extends LinearLayout {
 
 ## 3\) 어댑터 정의
 
-리스트뷰의 데이터 관리를 위해서는 어댑터가 필요하다. 각 아이템을 속성들을 설정하기 위해서는 getView 메소드를 사용한다. 다음 예제에서는 name, mobile 속을 설정하고 있다. getView를 통해 반환된 view 값은 리스트뷰에서 adapter를 설정할 때 적용된다.
+리스트뷰의 데이터 관리를 위해서는 어댑터가 필요하다. 각 아이템을 속성들을 설정하기 위해서는 getView 메소드를 사용한다. 다음 예제에서는 name, mobile 속을 설정하고 있다. getView를 통해 반환된 view 값은 리스트뷰에서 setAdapter로 각 아이템을 표시할 때 적용된다.
 
 {% code-tabs %}
 {% code-tabs-item title="SingerAdapter.java" %}
