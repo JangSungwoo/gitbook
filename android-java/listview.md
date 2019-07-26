@@ -4,6 +4,10 @@ description: '#부스트코스'
 
 # ListView
 
+
+
+![](../.gitbook/assets/listview.png)
+
 ## 1\) 아이템을 위한 XML 레이아웃을 정의
 
 {% code-tabs %}
@@ -93,8 +97,7 @@ public class SingerItemView extends LinearLayout {
 {% code-tabs %}
 {% code-tabs-item title="SingerAdapter.java" %}
 ```java
- cl
-ass SingerAdapter extends BaseAdapter{
+ class SingerAdapter extends BaseAdapter{
         ArrayList<SingerItem> items = new ArrayList<SingerItem>();
 
         @Override
@@ -164,6 +167,10 @@ public class SingerItem {
 
 
 ## 4\) 리스트뷰 정의
+
+
+
+
 
 
 

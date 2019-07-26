@@ -38,7 +38,7 @@ description: '#부스트코스'
 {% endtab %}
 
 {% tab title="stretchColumns" %}
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%286%29.png)
 
 ```markup
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -72,7 +72,7 @@ description: '#부스트코스'
 {% endtab %}
 
 {% tab title="layout\_column" %}
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
 ```markup
 <TableRow
