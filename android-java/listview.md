@@ -144,6 +144,11 @@ public class SingerItemView extends LinearLayout {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             SingerItemView view = new SingerItemView(getApplicationContext());
+            if(convertView == null){
+                view = new SingerItemView(getApplicationContext());
+            }else{
+                view = (SingerItemView) convertView;
+            }
             SingerItem item = items.get(position);
             view.setTvName(item.getName());
             view.setTvMobile(item.getMobile());
