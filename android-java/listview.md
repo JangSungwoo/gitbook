@@ -77,6 +77,7 @@ public class SingerItemView extends LinearLayout {
 
     TextView tvName;
     TextView tvMobile;
+    ImageView imgPhoto;
 
     public SingerItemView(Context context) {
         super(context);
@@ -94,7 +95,7 @@ public class SingerItemView extends LinearLayout {
 
         tvName = (TextView) findViewById(R.id.tvName);
         tvMobile = (TextView) findViewById(R.id.tvMobile);
-
+        imgPhoto = (ImageView) findViewById(R.id.imgPhoto);
     }
     public void setTvName(String name){
         tvName.setText(name);
@@ -102,6 +103,10 @@ public class SingerItemView extends LinearLayout {
 
     public void setTvMobile(String mobile){
         tvMobile.setText(mobile);
+    }
+
+    public void setImgPhoto(int resId ) {
+        imgPhoto.setImageResource(resId);
     }
 }
 ```
@@ -153,13 +158,27 @@ public class SingerItemView extends LinearLayout {
 public class SingerItem {
     String name;
     String mobile;
+    int photoResId;
 
-    public SingerItem(String name, String mobile){
+    public SingerItem(String name, String mobile, int photoResId){
         this.name = name;
         this.mobile = mobile;
+        this.photoResId = photoResId;
     }
     public String getName(){
         return name;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public int getPhotoResId() {
+        return photoResId;
+    }
+
+    public void setPhotoResId(int photoResId) {
+        this.photoResId = photoResId;
     }
 
     public void setName(String name) {
@@ -181,8 +200,6 @@ public class SingerItem {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-
 
 ## 4\) 리스트뷰 정의
 
