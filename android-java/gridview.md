@@ -10,6 +10,10 @@ description: '#부스트코스'
 
 {% page-ref page="listview.md" %}
 
+단, 리스트 뷰와 그리드 뷰의 다른점은 numColumns 속성의 유무이다. 
+
+numColumns는 열의 수를 지정하는것이다.
+
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
 ```java
@@ -146,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 {% endcode-tabs-item %}
 
 {% code-tabs-item title="activity\_main.xml" %}
-```
+```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
