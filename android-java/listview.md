@@ -4,8 +4,6 @@ description: '#부스트코스'
 
 # ListView
 
-
-
 ![](../.gitbook/assets/listview.png)
 
 위의 그림은 참고하여 아래의 절차에 따라 리스트뷰를 이해해보자.
