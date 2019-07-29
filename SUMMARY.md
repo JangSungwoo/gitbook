@@ -14,6 +14,7 @@
 * [Inflation](android-java/inflation.md)
 * [ListView](android-java/listview.md)
 * [Spinner](android-java/spiner.md)
+* [GridView](android-java/gridview.md)
 * [외부라이브러리를 참조하는 방법](android-java/undefined-2.md)
 * [프로젝트 경로 변경하는 법](android-java/undefined.md)
 * [화면 전환 시 객체를 전달하는 방법](android-java/undefined-1.md)
