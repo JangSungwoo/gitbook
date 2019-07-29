@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,android.R.layout.simple_spinner_item,items
         );
+        //spinner의 형태를 설정한다.
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
