@@ -260,7 +260,7 @@ public class SingerItem {
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17057/" %}
 
-
+![](../.gitbook/assets/listview.gif)
 
 
 
