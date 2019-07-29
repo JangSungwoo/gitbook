@@ -4,7 +4,11 @@ description: '#부스트코스'
 
 # Spinner
 
-Spinner도 리스트뷰와 동일하게 adapter를 사용해야한다. 하지만 다음 예제에서는 간단을 사용하므로 ArrayAdapter를 
+Spinner도 리스트뷰와 동일하게 adapter를 사용해야한다. 
+
+다음 예제에서는 아이템하나를 하나의 문자열로만 간단하게 사용하므로 ArrayAdapter를 사용하였다.
+
+Spinner를 통해 아이템을 선택하여 아이템의 이름을 텍스트로 나타내는 예제이다. 
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -37,4 +41,8 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17058/" %}
+
+
 
