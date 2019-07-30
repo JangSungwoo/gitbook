@@ -44,4 +44,5 @@
 ## BoostCourse Android
 
 * [부스트코스 미션1](boostcourse-android/1.md)
+* [부스트코스 미션2](boostcourse-android/2.md)
 
