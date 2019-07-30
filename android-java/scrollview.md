@@ -4,6 +4,11 @@ description: '#부스트코스'
 
 # Scrollview
 
+스크롤 뷰는 상하, 좌우 모두 스크롤이 가능하다.
+
+* 상하 스크롤 : ScrollView
+* 좌우 스크롤 : HorizontalScrollView
+
 #### 상하 스크롤 
 
 ```markup
