@@ -25,13 +25,13 @@
 * [CircleImageView](android-java/circleimageview.md)
 * [xml 사용하여 생산성높이기](android-java/xml.md)
 * [주석](android-java/undefined-3.md)
-* [화면 구성과 화면 간 전환](android-java/undefined-4.md)
+* [Activity](android-java/undefined-4.md)
 * [Intent](android-java/intent.md)
-* [부가데이터](android-java/undefined-5.md)
-* [액티비티 수명주기](android-java/undefined-6.md)
-* [서비스](android-java/undefined-7.md)
-* [브로드캐스트 수신자](android-java/undefined-8.md)
-* [위험권한 부여하기](android-java/undefined-9.md)
+* [putExtra, getExtra](android-java/undefined-5.md)
+* [Activity LifeCycle](android-java/undefined-6.md)
+* [Service](android-java/undefined-7.md)
+* [BroadCastReceiver](android-java/undefined-8.md)
+* [Permission](android-java/undefined-9.md)
 
 ## Android-Kotlin
 

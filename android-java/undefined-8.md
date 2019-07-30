@@ -2,5 +2,5 @@
 description: '#부스트코스'
 ---
 
-# 브로드캐스트 수신자
+# BroadCastReceiver
 
