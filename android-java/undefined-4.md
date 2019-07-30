@@ -24,7 +24,7 @@ startActivityForResult(intent,101);
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### MenuActivity -&gt; MainActivity 로 데이터 전송 후 액티비티 종
+#### MenuActivity -&gt; MainActivity 로 데이터 전송 후 액티비티 종료 
 
 {% code-tabs %}
 {% code-tabs-item title="MenuAcitivity.java" %}
@@ -56,5 +56,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 
+### Activity를 이동하는 방법들 
+
+
 
