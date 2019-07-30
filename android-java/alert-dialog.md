@@ -6,6 +6,8 @@ description: '#부스트코스'
 
 **AlertDialog를 사용하는 방법**
 
+AlertDialog는 안내메세지를 대화상자 형태로 나타내준다. 
+
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
 ```java
@@ -31,6 +33,8 @@ dialog.show();
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+다음과 같은 속성으로 AlertDialog의 형태를 변경할 수 있다.
 
 | AlertDialog.Builder 속성 | 설명 |
 | :--- | :--- |
