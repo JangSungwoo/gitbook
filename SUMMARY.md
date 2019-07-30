@@ -5,7 +5,7 @@
 ## Android-Java
 
 * [TableLayout](android-java/tablelayout.md)
-* [Scrollview](android-java/scrollview.md)
+* [ScrollView](android-java/scrollview.md)
 * [Event](android-java/untitled-1.md)
 * [Toast](android-java/untitled.md)
 * [Alert Dialog](android-java/alert-dialog.md)
@@ -21,7 +21,10 @@
 * [CustomAdapter의 getView에서 getApplicationContext\(\) 가져오는법](android-java/customadapter-getview-getapplicationcontext.md)
 * [Recylerview 사용법](android-java/recylerview.md)
 * [ScrollView 안의 ListView Scroll문제](android-java/scrollview-listview-scroll.md)
+* [변수 Naming](android-java/naming.md)
 * [CircleImageView](android-java/circleimageview.md)
+* [xml 사용하여 생산성높이기](android-java/xml.md)
+* [주석](android-java/undefined-3.md)
 
 ## Android-Kotlin
 
@@ -40,7 +43,5 @@
 
 ## BoostCourse Android
 
-* [변수 Naming](boostcourse-android/naming.md)
-* [주석](boostcourse-android/undefined.md)
-* [xml 사용하여 생산성높이기](boostcourse-android/xml.md)
+* [부스트코스 미션1](boostcourse-android/1.md)
 

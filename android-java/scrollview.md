@@ -2,7 +2,7 @@
 description: '#부스트코스'
 ---
 
-# Scrollview
+# ScrollView
 
 스크롤 뷰는 상하, 좌우 모두 스크롤이 가능하다.
 
