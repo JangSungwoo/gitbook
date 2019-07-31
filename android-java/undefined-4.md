@@ -74,7 +74,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
 {% page-ref page="undefined-5.md" %}
 {% endhint %}
 
-
+{% embed url="https://developer.android.com/guide/components/tasks-and-back-stack.html?hl=ko" %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17064/" %}
 
