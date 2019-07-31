@@ -68,6 +68,14 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% hint style="info" %}
+데이터 이동에 대한 자세한 정보는 다음 페이지를 참고하자.
+
+{% page-ref page="undefined-5.md" %}
+{% endhint %}
+
+
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17064/" %}
 
 
