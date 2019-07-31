@@ -82,6 +82,14 @@ startActivity(intent);
 
 ![](../.gitbook/assets/intentflag.png)
 
+{% hint style="info" %}
+액티비티를 위한 다양한 플래그를 확인하기위해서는 다음 가이드 문서를 확인하자
+
+[Android Developer : Intent](https://developer.android.com/reference/android/content/Intent.html?hl=ko#FLAG_ACTIVITY_SINGLE_TOP)
+{% endhint %}
+
+
+
 
 
 {% embed url="https://developer.android.com/guide/components/intents-filters?hl=ko" %}
