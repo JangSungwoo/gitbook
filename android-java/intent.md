@@ -41,4 +41,47 @@ description: '#부스트코스'
         &#xB0B4;&#xC6A9;&#xC744; &#xBCF4;&#xC5EC;</td>
     </tr>
   </tbody>
-</table>
+</table>### 명시적인텐트와 암시적 인텐트 
+
+인
+
+### 인텐트의 대표적 속성 
+
+* 범주 
+* 타입 
+* 컴포넌트 
+* 부가데이터 
+
+```text
+String receiver = etMoblie.getText().toString();
+Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+receiver));
+startActivity(intent);
+```
+
+
+
+```text
+Intent intent2 = new Intent();
+ComponentName name = new ComponentName("com.example.examintent","com.example.examintent.MenuActivity");
+intent2.setComponent(name);
+startActivity(intent2);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
