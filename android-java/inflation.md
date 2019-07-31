@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
 1. 우선 부분화면을 구현하기 위해서는 FrameLayout을 사용하고 id를 설정해준다.
 2. findViewById 메소드로 FrameLayout의  id값에 해당하는 View를 가져온다.\(container\)
-3. getSystemService\(\)를 통해 인스턴스화 된 서비스를 LayoutInflater의 객체\(layoutInflater\)로 받는다.
+3. getSystemService\(\)를 통해 인스턴스화 된 시스템 서비스를 LayoutInflater의 객체\(layoutInflater\)로 받는다.
 
 ```text
 layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
