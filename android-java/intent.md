@@ -47,9 +47,10 @@ description: '#부스트코스'
   </tbody>
 </table>### 명시적인텐트와 암시적 인텐트 
 
-#### 명시적인텐트 예시 
+* **명시적 인텐트 : 앱 내의 특정 액티비티나 서비스 등 특정한 앱 구성 요소를 시작하기 위해 사용하는 인텐트이다.** 
+* **암시적 인텐트 : 작업을 지정하여 기기에서 해당 작업을 수행할 수 있는 모든 앱을 호출할 수 있도록 한다.** 
 
-명시적 인텐트는 앱 내의 특정 액티비티나 서비스 등 특정한 앱 구성 요소를 시작하기 위해 사용하는 인텐트이다.
+#### 명시적인텐트 예시 
 
 ```text
 Intent intent2 = new Intent();
@@ -58,7 +59,7 @@ intent2.setComponent(name);
 startActivity(intent2);
 ```
 
-#### 암시적인텐트 예
+#### 암시적인텐트 예시 
 
 ```text
 String receiver = etMoblie.getText().toString();
@@ -79,25 +80,11 @@ startActivity(intent);
 
 ### 액티비티를 위한 플래그
 
-
+![](../.gitbook/assets/intentflag.png)
 
 
 
 {% embed url="https://developer.android.com/guide/components/intents-filters?hl=ko" %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17065/" %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
