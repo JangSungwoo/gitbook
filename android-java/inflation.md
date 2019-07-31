@@ -127,7 +127,7 @@ layoutInflater = LayoutInflater.from(getApplicationContext());
 
 getSystemService\(Context.LAYOUT\_INFLATER\_SERVICE\)대신 getIayoutInflater\(\), LayoutInflator.form\(getApplicationContext\(\)\) 으로 가능하다.
 
-   4. layoutInflater는 inflate 메소드를 통해 지정된 layout을 FrameLayout의 자식뷰 적용시킨다. 
+   4. layoutInflater는 inflate 메소드를 통해 지정된 layout을 FrameLayout의 자식뷰에 적용시킨다. 
 
    5. 버튼클릭을 통해 부분화면을 추가 및 삭제 되는것을 확인할 수 있다.
 
