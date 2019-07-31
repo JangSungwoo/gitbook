@@ -15,7 +15,7 @@ description: '#부스트코스'
 
 ### 액티비티 화면 전환 
 
-#### MainActivity -&gt; MenuActivity 로 이동
+#### 1\) MainActivity -&gt; MenuActivity 로 이동
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
@@ -26,7 +26,11 @@ startActivityForResult(intent,101);
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### MenuActivity -&gt; MainActivity 로 데이터 전송 후 액티비티 종료 
+{% hint style="info" %}
+다른액티비티로 이동만이 목적이라면 startActivity\(intent\) 로 이동이 가능하다. 하지만 응답을 받고 싶다면 startActivityForResult\(intent,101\) 처럼 코드번호를 지정하여\(1\) 액티비티를 이동한후 OnActivityResult 오버라이드 메소드에서 코드번호를 통해 데이터를 수신 받을 수 있다.\(3\)
+{% endhint %}
+
+#### 2\) MenuActivity -&gt; MainActivity 로 데이터 전송 후 액티비티 종료 
 
 {% code-tabs %}
 {% code-tabs-item title="MenuAcitivity.java" %}
@@ -45,7 +49,7 @@ finish();
 일반적으로 액티비티는 스택형식으로 쌓이기 때문에 액티비티를 종료할 경우 finish\(\) 메소드를 통해 액티비티가 종료되고 이전 액티비티가 나타나게 된다.
 {% endhint %}
 
-#### MenuActivity로 부터 전송 데이터 MainActivity에서 수신   
+#### 3\) MenuActivity로 부터 전송 데이터 MainActivity에서 수신   
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
