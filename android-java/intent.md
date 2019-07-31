@@ -4,6 +4,10 @@ description: '#부스트코스'
 
 # Intent
 
+## Intent란?
+
+일반적으로 **액티비티 시작 , 서비스 시작 , 브로드 캐스트 전달**의 역할을 한다.  
+
 ### 액션과 데이터를 사용하는 대표적인 예
 
 <table>
@@ -38,19 +42,23 @@ description: '#부스트코스'
     <tr>
       <td style="text-align:left">ACTION_VIEW content://contacts/people</td>
       <td style="text-align:left">&#xC804;&#xD654;&#xBC88;&#xD638;&#xBD80; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;
-        &#xB0B4;&#xC6A9;&#xC744; &#xBCF4;&#xC5EC;</td>
+        &#xB0B4;&#xC6A9;&#xC744; &#xBCF4;&#xC5EC;&#xC90C;</td>
     </tr>
   </tbody>
 </table>### 명시적인텐트와 암시적 인텐트 
 
-인
+#### 명시적인텐트 예시 
 
-### 인텐트의 대표적 속성 
+명시적 인텐트는 앱 내의 특정 액티비티나 서비스 등 특정한 앱 구성 요소를 시작하기 위해 사용하는 인텐트이다.
 
-* 범주 
-* 타입 
-* 컴포넌트 
-* 부가데이터 
+```text
+Intent intent2 = new Intent();
+ComponentName name = new ComponentName("com.example.examintent","com.example.examintent.MenuActivity");
+intent2.setComponent(name);
+startActivity(intent2);
+```
+
+#### 암시적인텐트 예
 
 ```text
 String receiver = etMoblie.getText().toString();
@@ -60,16 +68,24 @@ startActivity(intent);
 
 
 
-```text
-Intent intent2 = new Intent();
-ComponentName name = new ComponentName("com.example.examintent","com.example.examintent.MenuActivity");
-intent2.setComponent(name);
-startActivity(intent2);
-```
+### 인텐트의 대표적 속성 
+
+* 범주 
+* 타입 
+* 컴포넌트 
+* 부가데이터 
+
+
+
+### 액티비티를 위한 플래그
 
 
 
 
+
+{% embed url="https://developer.android.com/guide/components/intents-filters?hl=ko" %}
+
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17065/" %}
 
 
 
