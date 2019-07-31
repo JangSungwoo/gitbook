@@ -11,6 +11,8 @@ description: '#부스트코스'
 * **Broadcast Receiver**
 * **Content Provider**
 
+안드로이드 앱을 구성하는 구성요소 중에 Activity에 대해서 알아보자.
+
 ### 액티비티 화면 전환 
 
 #### MainActivity -&gt; MenuActivity 로 이동
@@ -37,6 +39,12 @@ finish();
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% hint style="info" %}
+**액티비티를 종료하는 방법** 
+
+일반적으로 액티비티는 스택형식으로 쌓이기 때문에 액티비티를 종료할 경우 finish\(\) 메소드를 통해 액티비티가 종료되고 이전 액티비티가 나타나게 된다.
+{% endhint %}
+
 #### MenuActivity로 부터 전송 데이터 MainActivity에서 수신   
 
 {% code-tabs %}
@@ -56,7 +64,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Activity를 이동하는 방법들 
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17064/" %}
 
 
 

@@ -82,7 +82,7 @@ LinearLayout과의 차이점은 orientation설정 없이 horizontal 방식으로
 {% endtab %}
 
 {% tab title="layout\_column" %}
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 ```markup
 <TableRow
