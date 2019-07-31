@@ -23,28 +23,6 @@ XML레이아웃에는 버튼이 태그형식되어있고  버튼을 사용하기
 
 자바파일에서 부분화면을 구현해보자.
 
-1. 우선 부분화면을 구현하기 위해서는 FrameLayout을 사용하고 id를 설정해준다.
-2. findViewById 메소드로 FrameLayout의  id값에 해당하는 View를 가져온다.
-3. getSystemService\(\)를 통해 인스턴스화 된 서비스를 LayoutInflater의 객체\(layoutInflater\)로 받는다.
-
-```text
-layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-```
-
-```text
-layoutInflater = getLayoutInflater();
-```
-
-```text
-layoutInflater = LayoutInflater.from(getApplicationContext());
-```
-
-getSystemService\(Context.LAYOUT\_INFLATER\_SERVICE\)대신 getIayoutInflater\(\), LayoutInflator.form\(getApplicationContext\(\)\) 으로 가능하다.
-
-   4. layoutInflater는 inflate 메소드를 통해 지정된 layout을 FrameLayout의 자식뷰 적용시킨다. 
-
-   5. 버튼클릭을 통해 부분화면을 추가 및 삭제 되는것을 확인할 수 있다.
-
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
 ```java
@@ -130,6 +108,28 @@ public class MainActivity extends AppCompatActivity {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+1. 우선 부분화면을 구현하기 위해서는 FrameLayout을 사용하고 id를 설정해준다.
+2. findViewById 메소드로 FrameLayout의  id값에 해당하는 View를 가져온다.
+3. getSystemService\(\)를 통해 인스턴스화 된 서비스를 LayoutInflater의 객체\(layoutInflater\)로 받는다.
+
+```text
+layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+```
+
+```text
+layoutInflater = getLayoutInflater();
+```
+
+```text
+layoutInflater = LayoutInflater.from(getApplicationContext());
+```
+
+getSystemService\(Context.LAYOUT\_INFLATER\_SERVICE\)대신 getIayoutInflater\(\), LayoutInflator.form\(getApplicationContext\(\)\) 으로 가능하다.
+
+   4. layoutInflater는 inflate 메소드를 통해 지정된 layout을 FrameLayout의 자식뷰 적용시킨다. 
+
+   5. 버튼클릭을 통해 부분화면을 추가 및 삭제 되는것을 확인할 수 있다.
 
 {% hint style="info" %}
 [getSystemService\(\)](https://developer.android.com/reference/android/content/Context.html#getSystemService%28java.lang.String%29) 는 원하는 서비스를 불러오는 메소드이다.
