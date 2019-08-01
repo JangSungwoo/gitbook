@@ -8,7 +8,7 @@ description: '#부스트코스'
 >
 > #### 이미지가 줄어들거나 늘어날때 이미지의 왜곡을 해결하는 방법
 
-![&#xC0AC;&#xC9C4;1 - 9Patch](../.gitbook/assets/image%20%2810%29.png)
+![&#xC0AC;&#xC9C4;1 - 9Patch](../.gitbook/assets/image%20%2811%29.png)
 
 ```text
 <Button
@@ -33,7 +33,7 @@ description: '#부스트코스'
 
 ![&#xC0AC;&#xC9C4; &#xBD88;&#xB7EC;&#xC624;&#xAE30;](../.gitbook/assets/image.png)
 
-위 사이트에서 변경을 원하는 이미지를 선택하고 ![](../.gitbook/assets/image%20%284%29.png)\(다운로드\) 버튼을 누르면 된다.
+위 사이트에서 변경을 원하는 이미지를 선택하고 ![](../.gitbook/assets/image%20%285%29.png)\(다운로드\) 버튼을 누르면 된다.
 
 다운로드 된 파일의 res안에 모든 폴를 복사하여 프로젝트 src &gt; app &gt; res 아래에 붙여넣기 해주면 된다. 
 {% endhint %}
