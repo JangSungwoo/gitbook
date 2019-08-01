@@ -41,7 +41,19 @@ UI 객체들은 헝가리언 표기법을 사용해야 가독성에 유리해질
 * 단어를 밑줄문자로 구분하는 표기법
 * 예시: background\_color, user\_name 
 
-\*\*\*\*
+**뷰 컴포넌트 규칙** 
+
+* Label : lbl
+* TextView : txt
+* DataGrid : dtg
+* Button : btn
+* ImageButton : imb
+* Hyperlink : hlk
+* DropDownList : ddl
+* Image : img
+* Panel : pnl
+* PlaceHolder : phd
+* Table : tbl
 
 **출처**
 
