@@ -15,6 +15,13 @@
 * [ListView](android-java/listview.md)
 * [Spinner](android-java/spiner.md)
 * [GridView](android-java/gridview.md)
+* [Activity](android-java/undefined-4.md)
+* [Intent](android-java/intent.md)
+* [putExtra, getExtra](android-java/undefined-5.md)
+* [Activity LifeCycle](android-java/undefined-6.md)
+* [Service](android-java/undefined-7.md)
+* [BroadCastReceiver](android-java/undefined-8.md)
+* [Permission](android-java/undefined-9.md)
 * [외부라이브러리를 참조하는 방법](android-java/undefined-2.md)
 * [프로젝트 경로 변경하는 법](android-java/undefined.md)
 * [화면 전환 시 객체를 전달하는 방법](android-java/undefined-1.md)
@@ -25,13 +32,6 @@
 * [CircleImageView](android-java/circleimageview.md)
 * [xml 사용하여 생산성높이기](android-java/xml.md)
 * [주석](android-java/undefined-3.md)
-* [Activity](android-java/undefined-4.md)
-* [Intent](android-java/intent.md)
-* [putExtra, getExtra](android-java/undefined-5.md)
-* [Activity LifeCycle](android-java/undefined-6.md)
-* [Service](android-java/undefined-7.md)
-* [BroadCastReceiver](android-java/undefined-8.md)
-* [Permission](android-java/undefined-9.md)
 
 ## Android-Kotlin
 
