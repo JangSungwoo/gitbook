@@ -23,7 +23,7 @@ padding의 속성의 적용 유무이다.
 background는 padding 값과 상관없이 배경에 이미지를 표시하지만
 
 src는 padding 에 따라 이미지의 사이즈가 변경될 수 있다.
+
+![](../.gitbook/assets/background_src.png)
 {% endhint %}
-
-
 
