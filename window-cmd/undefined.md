@@ -27,11 +27,15 @@ SET DIRBAK=%BAKPATH%\%DATETIME%.zip
 
  `-ex:"제외파일1.txt;제외폴더"`
 
+원하는 경로를 치환해서 아래와같이 사용하면 특정파일 및 폴더는 제외하고  현재위치의 파일 및 폴더를 지정한 폴더안에 압축파일을 생성한다.
+
+```text
+"C:\Program Files\Bandizip\Bandizip.exe" a %EXTDIR% %DIRBAK% %DIRORG% 
+```
 
 
 
-
-
+{% embed url="https://kr.bandisoft.com/bandizip/help/parameter/" %}
 
 {% embed url="https://m.blog.naver.com/PostView.nhn?blogId=mymizze&logNo=90189250583&proxyReferer=https%3A%2F%2Fwww.google.com%2F" %}
 
