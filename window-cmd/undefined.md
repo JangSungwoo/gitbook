@@ -20,12 +20,12 @@ SET DATETIME=%DATE%-%TIME%
 SET DIRBAK=%BAKPATH%\%DATETIME%.zip
 @echo %DIRBAK%
 
-"C:\Program Files\Bandizip\Bandizip.exe" a  %EXTDIR% %DIRBAK% %DIRORG% 
+"C:\Program Files\Bandizip\Bandizip.exe" a %EXTDIR% %DIRBAK% %DIRORG% 
 ```
 
+반디집으로 압축을 할 경우 제외할 파일은 이렇게 사용해야한다.
 
-
-
+ `-ex:"제외파일1.txt;제외폴더"`
 
 
 
