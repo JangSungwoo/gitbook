@@ -10,5 +10,7 @@
 
 참고로 강의내용에서는 targetversion 을 22로 변경하고 사용하였음
 
+## getIntent\(\)?
+
 
 
