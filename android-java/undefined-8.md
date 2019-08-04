@@ -98,6 +98,12 @@ intent-filter 의 action을 통해 지정한 인텐트만 받겠다고 지정을
 
 안드로이드 버전이 22 이하인경우 위험권한을 자동으로 설정하지만 버전 23 부터는 사용자에게 위험권한 승인을 받아야 정상적인 기능을 수행할 수 있다. 
 
+{% hint style="info" %}
+안드로이드 버전 22 이하에서 사용을 하기위해서는 gradle 파일에서 targetSdkVersion 을 22로 변경 해주어야 한다. 그리고 에뮬레이터 버전을 25로 설정하여 실행해야 한다. 
+{% endhint %}
+
+
+
 ### 4\) SmsRecevier를 통해 수신된 intent로 부터 데이터를 수신 및 처리 
 
 ```java
@@ -181,7 +187,6 @@ private SmsMessage[] parseSmsMessage(Bundle bundle) {
                 messages[i] = SmsMessage.createFromPdu((byte[]) objs[i], format);
             } else {
                 messages[i] = SmsMessage.createFromPdu((byte[]) objs[i]);
-
             }
         }
     return messages;
