@@ -85,7 +85,47 @@ description: '#부스트코스'
       </td>
     </tr>
   </tbody>
-</table>{% embed url="https://edwith.org/boostcourse-android/lecture/22591/" %}
+</table>## 위험 권한 부여 방법 
+
+```java
+private void initPermission() {
+    int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS);
+    if(permissionCheck == PackageManager.PERMISSION_GRANTED){
+        Toast.makeText(this, "SMS 수신 권한 주어져 있음.",Toast.LENGTH_LONG).show();
+    }else{
+        Toast.makeText(this,"SMS 수신 권한 없음",Toast.LENGTH_LONG).show();
+        if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.RECEIVE_SMS)){
+            Toast.makeText(this,"SMS 권한 설명 필요함",Toast.LENGTH_LONG).show();
+        }else{
+            ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.RECEIVE_SMS},1);
+        }
+    }
+}
+
+@Override
+public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    switch (requestCode){
+        case 1:
+            if(grantResults.length > 0) {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "SMS 수신 권한을 사용자가 승인함", Toast.LENGTH_LONG).show();
+                } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                    Toast.makeText(this, "SMS 수신 권한을 사용자가 거부함", Toast.LENGTH_LONG).show();
+                }
+            }else{
+                Toast.makeText(this, "SMS 수신 권한을 부여받지 못함", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+```
+
+{% hint style="info" %}
+build.gradle 파일의 targetSdkVersion을 23미만으로 설정을 할 경우 위험권한이 자동으로 부여된다. targetSdkVersion 이 23이상인경우 권한 부여 요청 대화상자가 뜨며 사용자가 허용을 한다면 정상적인 동작을 하게 된다. 
+{% endhint %}
+
+{% embed url="https://edwith.org/boostcourse-android/lecture/22591/" %}
 
 
 
