@@ -6,7 +6,7 @@ description: '#부스트코스'
 
 ## Intent란?
 
-일반적으로 **액티비티 시작 , 서비스 시작 , 브로드 캐스트 전달**의 역할을 한다.  
+일반적으로 **액티비티 시작 , 서비스 시작 , 브로드 캐스트 사이에서의 전달** 역할을 한다.  
 
 ### 액션과 데이터를 사용하는 대표적인 예
 
@@ -52,7 +52,7 @@ description: '#부스트코스'
 
 #### 명시적인텐트 예시 
 
-```text
+```java
 Intent intent2 = new Intent();
 ComponentName name = new ComponentName("com.example.examintent","com.example.examintent.MenuActivity");
 intent2.setComponent(name);
@@ -61,7 +61,7 @@ startActivity(intent2);
 
 #### 암시적인텐트 예시 
 
-```text
+```java
 String receiver = etMoblie.getText().toString();
 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+receiver));
 startActivity(intent);
