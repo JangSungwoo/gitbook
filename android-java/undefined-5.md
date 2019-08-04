@@ -63,24 +63,92 @@ private void processIntent(Intent intent) {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 기본 자료형 데이터
+### 기본 자료형 데이터\(int, String, ...\)
 
-```text
+{% code-tabs %}
+{% code-tabs-item title="FirstActivity.java" %}
+```java
 Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
 int number = 1;
 String data = "Hello";
 intent.putExtra("number",number);
 intent.putExtra("data",data);
 ```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="SecondActivity.java" %}
+```java
+Intent intent = getIntent();
+int count = intent.getIntExtra("number",0);
+String data = intent.getStringExtra("data");
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ### ArrayList
 
-```text
+{% code-tabs %}
+{% code-tabs-item title="FirstActivity.java" %}
+```java
 Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+ArrayList<String> dataArrayList = new ArrayList<String>();
+dataArrayList.add("A");
+dataArrayList.add("B");
+dataArrayList.add("C");
+
 intent.putExtra("dataArrayList",dataArrayList);
 ```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="SecondActivity.java" %}
+```java
+Intent intent = getIntent();
+ArrayList<String> names = (ArrayList<String>) intent.getSerializableExtra("names");
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ### 객체를 전달할 수 있는 Parcelable
 
+{% code-tabs %}
+{% code-tabs-item title="FirstActivity.java" %}
+```java
+Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+SimpleData data = new SimpleData();
+intent.putExtra("data",data);
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="SecondActivity.java" %}
+```java
+Intent intent = getIntent();
+SimpleData data = intent.getParcelableExtra("data");
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ### ArrayList Parcelable
+
+{% code-tabs %}
+{% code-tabs-item title="FirstActivity.java" %}
+```java
+Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+ArrayList<SimpleData> simpleDataArrayList = new ArrayList<SimpleData>();
+intent.putParcelableArrayListExtra("simpleDataArrayList",simpleDataArrayList);
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="SecondActivity.java" %}
+```java
+Intent intent = getIntent();
+ArrayList<SimpleData> names = (ArrayList<SimpleData>) intent.getSerializableExtra("simpleDataArrayList");
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
+
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17066/" %}
+
+
 
