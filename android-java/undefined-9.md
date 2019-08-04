@@ -125,6 +125,10 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String[] permis
 build.gradle 파일의 targetSdkVersion을 23미만으로 설정을 할 경우 위험권한이 자동으로 부여된다. targetSdkVersion 이 23이상인경우 권한 부여 요청 대화상자가 뜨며 사용자가 허용을 한다면 정상적인 동작을 하게 된다. 
 {% endhint %}
 
+{% embed url="https://developer.android.com/guide/topics/security/permissions.html?hl=ko" %}
+
+
+
 {% embed url="https://edwith.org/boostcourse-android/lecture/22591/" %}
 
 
