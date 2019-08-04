@@ -63,7 +63,7 @@ startActivity(intent2);
 
 ```java
 String receiver = etMoblie.getText().toString();
-Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+receiver));
+Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+receiver));
 startActivity(intent);
 ```
 
@@ -76,7 +76,13 @@ startActivity(intent);
 * **컴포넌트\(Component\)** : 인텐트에 사용될 컴포넌트 클래스 이름을 명시적으로 지정 
 * **부가데이터\(Extra\)** : 인텐트는 추가적인 정보를 넣을 수 있도록 번들\(Bundle\) 객체를 담고 있고 이 객체를 통해 인텐트 안에 더 많은 정보를 넣어 다른 애플리케이션 구성요소에 전달할 수 있음 
 
+{% hint style="info" %}
+MIME 란?
 
+정의 : [Multipurpose Internet Mail Extensions](https://ko.wikipedia.org/wiki/MIME)
+
+참고 : [Android MIME Type](https://javaexpert.tistory.com/m/897?category=669591)
+{% endhint %}
 
 ### 액티비티를 위한 플래그
 
