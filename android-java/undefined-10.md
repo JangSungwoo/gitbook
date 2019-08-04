@@ -12,5 +12,7 @@
 
 
 
+## Device Monitor가 없어졌는데 Service 실행여부를 어떻게 확인하는가? 
+
 
 
