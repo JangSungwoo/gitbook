@@ -6,11 +6,18 @@ description: '#부스트코스'
 
 ## 플래그 
 
-Intent.FLAG\_ACTIVITY\_NEW\_TASK
+**Intent.FLAG\_ACTIVITY\_NEW\_TASK** 
 
-Intent.FLAG\_ACTIVITY\_SINGLE\_TOP
+* 액티비티들을 관리하는 태스크\(TASK\) 객체를 새로 만듦.
+* 브로드캐스트 수신자나 서비스의 경우 화면이 없기 때문에 새로운 화면을 띄워야 하므로 이 플래그 사용. 
 
-Intent.FLAG\_ACTIVITY\_CLEAR\_TOP
+**Intent.FLAG\_ACTIVITY\_SINGLE\_TOP**
+
+* 같은 액티비티인경우 하나만 띄우도록 함. 
+
+**Intent.FLAG\_ACTIVITY\_CLEAR\_TOP**
+
+* 액티비티 스택에 액티비티A -&gt; 액티비티B 인 상태에서 액티비티A가 새로 추가된경우 이 액티비티 A에 쌓인 액티비티들을 제거하는 역할은 함.
 
 {% embed url="https://developer.android.com/guide/components/activities/tasks-and-back-stack\#IntentFlagsForTasks" %}
 
@@ -23,6 +30,10 @@ Intent.FLAG\_ACTIVITY\_CLEAR\_TOP
 플래그를 사용한 인텐트 전달\(액티비티 재사용 시\) : onNewIntent\(\)
 
 ## 부가데이터 전달
+
+putExtra\(\), putParcelableArrayListExtra\(\) 을 통해 데이터를 전달하며  
+
+getIntExtra\(\), getStringExtra\(\), getSerializeableExtra\(\), getParcelableArrayListExtra\(\) 으로 데이터를 전달 받는다.
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
@@ -141,12 +152,10 @@ intent.putParcelableArrayListExtra("simpleDataArrayList",simpleDataArrayList);
 {% code-tabs-item title="SecondActivity.java" %}
 ```java
 Intent intent = getIntent();
-ArrayList<SimpleData> names = (ArrayList<SimpleData>) intent.getSerializableExtra("simpleDataArrayList");
+ArrayList<SimpleData> names = (ArrayList<SimpleData>) intent.getParcelableArrayListExtra("simpleDataArrayList");
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17066/" %}
 
