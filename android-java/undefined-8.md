@@ -41,7 +41,7 @@ public class SmsReceiver extends BroadcastReceiver {
 
             Date receiverDate = new Date(message[0].getTimestampMillis());
             Log.d(TAG,"received date : " + receiverDate);
-            //smsActivity로 데이터를 보
+            //smsActivity로 데이터를 보냄 
             sendToActivity(context,sender,contents,receiverDate);
         }
 
