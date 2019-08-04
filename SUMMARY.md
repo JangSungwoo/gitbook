@@ -17,7 +17,7 @@
 * [GridView](android-java/gridview.md)
 * [Activity](android-java/undefined-4.md)
 * [Intent](android-java/intent.md)
-* [putExtra, getExtra](android-java/undefined-5.md)
+* [Extra](android-java/undefined-5.md)
 * [Activity LifeCycle](android-java/undefined-6.md)
 * [Service](android-java/undefined-7.md)
 * [BroadCastReceiver](android-java/undefined-8.md)
