@@ -256,6 +256,10 @@ public class SmsActivity extends AppCompatActivity {
 
 ![](../.gitbook/assets/broadcast_sms.gif)
 
+{% embed url="https://developer.android.com/guide/components/broadcasts.html" %}
+
+
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17069/" %}
 
 
