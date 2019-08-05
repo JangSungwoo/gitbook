@@ -63,7 +63,7 @@ public class MyService extends Service {
                 Intent.FLAG_ACTIVITY_SINGLE_TOP |
                 Intent.FLAG_ACTIVITY_CLEAR_TOP);
         showIntent.putExtra("command", "show");
-        showIntent.putExtra("name", name + "from service");
+        showIntent.putExtra("name", name);
         startActivity(showIntent);
     }
 
@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
             String name = intent.getStringExtra("name");
 
             Toast.makeText(this,"서비스로부터 전달받은 데이터 : "+command+", "+name,Toast.LENGTH_LONG).show();
+            edtData.setText(name);
         }
     }
 
@@ -162,11 +163,11 @@ public class MainActivity extends AppCompatActivity {
 
 서비스를 호출할 때에는 `startService(intent)`를 통해 service 를 시작하거나 데이터를 전달할 때 사용한다. 
 
-
-
 {% hint style="info" %}
 Oreo 버전 이상에서는 백그라운드 작업을 허용하지 않기 때문에 `startService()` 가 아닌 다른 방법을 사용하여야 한다.
 {% endhint %}
+
+![](../.gitbook/assets/service.gif)
 
 {% embed url="https://developer.android.com/reference/android/app/Service" %}
 
