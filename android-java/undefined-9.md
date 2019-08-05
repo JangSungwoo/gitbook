@@ -89,7 +89,9 @@ description: '#부스트코스'
 
 ```java
 private void initPermission() {
+    //Manifest의 권한 확
     int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS);
+    //권한 여부 확
     if(permissionCheck == PackageManager.PERMISSION_GRANTED){
         Toast.makeText(this, "SMS 수신 권한 주어져 있음.",Toast.LENGTH_LONG).show();
     }else{
@@ -97,6 +99,7 @@ private void initPermission() {
         if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.RECEIVE_SMS)){
             Toast.makeText(this,"SMS 권한 설명 필요함",Toast.LENGTH_LONG).show();
         }else{
+            //권한 요
             ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.RECEIVE_SMS},1);
         }
     }
