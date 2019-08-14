@@ -83,6 +83,22 @@ ExampleFragment fragment = (ExampleFragment) getFragmentManager().findFragmentBy
 
 ![](../.gitbook/assets/frament_lifecycle_2.png)
 
+## 액티비티와 프래그먼트 간 데이터 전달 
+
+데이터 송신 
+
+```text
+examFragment examFragment = new examFragment();
+Bundle args = new Bundle(); args.putInt("index", index); 
+examFragment.setArguments(args);
+```
+
+데이터 수신 
+
+```text
+int index = getArguments().getParcelable("index");
+```
+
 ## 예제 
 
 {% code-tabs %}
