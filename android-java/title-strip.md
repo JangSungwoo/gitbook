@@ -159,7 +159,7 @@ Button btnChangePager = findViewById(R.id.btn_change_pager);
 
 
 
-
+{% embed url="https://developer.android.com/guide/navigation/navigation-swipe-view" %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17079/" %}
 
