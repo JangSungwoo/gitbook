@@ -4,11 +4,11 @@ description: '#부스트코스'
 
 # Tab
 
-1\) design 패키지 참조  
+### 1\) design 패키지 참조  
 
 File &gt; Project Structure &gt; Dependencies &gt; + Library Dependency &gt; com.android.support:design 추가 
 
-2\) activity\_main.xml 파일을 수정한다. 
+### **2\) activity\_main.xml 파일을 수정한다.** 
 
 {% code-tabs %}
 {% code-tabs-item title="activity\_main.xml" %}
@@ -65,6 +65,21 @@ File &gt; Project Structure &gt; Dependencies &gt; + Library Dependency &gt; com
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+**레이아웃 구조**
+
+```text
+<CoordinatorLayout>
+   <AppBarLayout>
+      <Toolbar>
+      </Toolbar>
+      <TabLayout>
+      </TabLayout>
+   </AppBarLayout>
+   <FrameLayout>
+   </FrameLayout>
+</CoordinatorLayout>
+```
+
 {% hint style="info" %}
 tab과 fragment의 내용이 겹치지 않기 위해서는 다음코드를 추가해야한다. 
 
@@ -73,7 +88,17 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
 ```
 {% endhint %}
 
-3\) 탭에서 사용할 fragment 파일을 생성한다.
+### 3\) NoActionBar로 style 변경
+
+```text
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+```
+
+설정을 안할 경우 다음과 같은 에러가 발생한다. \(링크 참조\)
+
+{% page-ref page="untitled-2.md" %}
+
+### **4\) 탭에서 사용할 fragment 파일을 생성한다.**
 
 {% code-tabs %}
 {% code-tabs-item title="Firstfragment.java" %}
@@ -115,7 +140,7 @@ public class FirstFragment extends Fragment {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-4\) MainActivity에 탭에 사용할 fragment를 선언한다. 
+### 5\) MainActivity에 탭에 사용할 fragment를 선언한다. 
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
@@ -145,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-5\) MainActivity의 onCreate 안에 TabLayout에 대한 설정을 한다. 
+### 6\) MainActivity의 onCreate 안에 TabLayout에 대한 설정을 한다. 
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
