@@ -8,9 +8,9 @@ description: '#부스트코스'
 
 #### 버튼을 클릭하여 이미지를 변경하는 예제를 해보자. 
 
-#### **1\) 버튼리스트를 Fragment로 정의 한다. \( fragment\_list.xml \)**
+#### **1\) 버튼리스트를 Fragment로 정의 한다.**
 
-**2\) 이미지뷰어를 Fragment로 정의한다. \( fragment\_viewer.xml \)** 
+**2\) 이미지뷰어를 Fragment로 정의한다.**
 
 **3\) ListFragment에서 ViewGroup과 fragment\_list를 inflate한다.** 
 
