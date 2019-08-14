@@ -14,7 +14,7 @@ LinearLayout과의 차이점은 orientation설정 없이 horizontal 방식으로
 
 {% tabs %}
 {% tab title=" Basic" %}
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -48,7 +48,7 @@ LinearLayout과의 차이점은 orientation설정 없이 horizontal 방식으로
 {% endtab %}
 
 {% tab title="stretchColumns" %}
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 ```markup
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -82,7 +82,7 @@ LinearLayout과의 차이점은 orientation설정 없이 horizontal 방식으로
 {% endtab %}
 
 {% tab title="layout\_column" %}
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 ```markup
 <TableRow
