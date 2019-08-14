@@ -106,3 +106,32 @@ public class FirstFragment extends Fragment {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+4\) MainActivity에 탭에 사용할 fragment를 선언한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="MainActivity.java" %}
+```java
+public class MainActivity extends AppCompatActivity {
+
+    FirstFragment firstFragment;
+    SecondFragment secondFragment;
+    ThirdFragment thirdFragment;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        firstFragment = new FirstFragment();
+        secondFragment = new SecondFragment();
+        thirdFragment = new ThirdFragment();
+
+        getSupportFragmentManager().beginTransaction().add(R.id.container,firstFragment).commit();
+    }
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
