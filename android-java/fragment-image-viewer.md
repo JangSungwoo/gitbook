@@ -214,6 +214,8 @@ public class ListFragment extends Fragment {
 
 ![](../.gitbook/assets/fragment_image_viewer.gif)
 
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17075/" %}
+
 
 
 

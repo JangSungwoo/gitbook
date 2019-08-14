@@ -211,3 +211,7 @@ tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
 ![](../.gitbook/assets/tab.gif)
 
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17077/" %}
+
+
+

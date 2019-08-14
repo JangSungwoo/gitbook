@@ -26,6 +26,8 @@ description: '#부스트코스'
 
 ## 프래그먼트 매니저\(FragmentManager\) 
 
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17074/" %}
+
 
 
 
