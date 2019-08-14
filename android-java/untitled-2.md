@@ -1,4 +1,4 @@
-# Untitled
+# setSupportActionBar 에러
 
 다음과 같은 에러 메세지가 발생할 경우 
 

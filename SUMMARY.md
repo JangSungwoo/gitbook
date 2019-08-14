@@ -46,7 +46,7 @@
 * [ActionBar Back Button Event](android-java/actionbar-back-button-event.md)
 * [Toolbar 버튼](android-java/toolbar.md)
 * [unescaped apostrophe in string](android-java/unescaped-apostrophe-in-string.md)
-* [Untitled](android-java/untitled-2.md)
+* [setSupportActionBar 에러](android-java/untitled-2.md)
 
 ## Android-Kotlin
 
