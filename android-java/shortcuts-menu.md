@@ -95,9 +95,87 @@ public class firstFragment extends Fragment {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-**3\) Navigation Drawer의 아이템을 설정** 
+**3\) Navigation Drawer의 head 및 view의 아이템을 설정** 
 
-기본값인경우 **프로필사진변경, 이름, 메일**은 nav\_head\_main.xml 파일에서 수정한다. 
+기본값인경우 **프로필사진변경, 이름, 메일** 항목은 layout &gt; nav\_head\_main.xml 파일에서 수정한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="nav\_head\_main.xml" %}
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/jang" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_header_subtitle" />
+
+</LinearLayout>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Navigation view를 설정하기 위해서는 menu &gt; activity\_main\_drawer.xml에서 변경이 가능하다.  
+
+{% code-tabs %}
+{% code-tabs-item title="activity\_main\_drawer.xml" %}
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="첫번재화면" />
+        <item
+            android:id="@+id/nav_second"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="두번째화면" />
+        <item
+            android:id="@+id/nav_third"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="세번째화면" />
+
+    </group>
+
+</menu>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+onNavigationItemSelected에서 item.getItemId\(\) 를 통해 선택된 아이템을 비교하여 클릭이벤트를 제어할 수 있다. 
+
+onFragmentSelected는 선택된 아이템에 해당하는 fragment를 FragmentManager를 통해 infalte 한다. 
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
@@ -143,10 +221,6 @@ public boolean onNavigationItemSelected(MenuItem item) {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-onNavigationItemSelected에서 item.getItemId\(\) 를 통해 선택된 아이템을 비교하여 클릭이벤트를 제어할 수 있다. 
-
-onFragmentSelected는 선택된 아이템에 해당하는 fragment를 FragmentManager를 통해 infalte 한다. 
 
 
 
