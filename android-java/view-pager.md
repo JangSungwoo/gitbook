@@ -112,7 +112,9 @@ pager.setAdapter(adapter);
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-
+{% hint style="info" %}
+`setOffscreenPageLimit` 는 미리 몇개를 그려놓을지 지정하는 것이다. 
+{% endhint %}
 
 
 
