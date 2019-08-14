@@ -54,7 +54,8 @@ File &gt; Project Structure &gt; Dependencies &gt; + Library Dependency &gt; com
         <FrameLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
         </FrameLayout>
     </android.support.design.widget.CoordinatorLayout>
@@ -63,6 +64,14 @@ File &gt; Project Structure &gt; Dependencies &gt; + Library Dependency &gt; com
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+{% hint style="info" %}
+tab과 fragment의 내용이 겹치지 않기 위해서는 다음코드를 추가해야한다. 
+
+```text
+app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+```
+{% endhint %}
 
 3\) 탭에서 사용할 fragment 파일을 생성한다.
 
@@ -129,9 +138,51 @@ public class MainActivity extends AppCompatActivity {
         thirdFragment = new ThirdFragment();
 
         getSupportFragmentManager().beginTransaction().add(R.id.container,firstFragment).commit();
+    
     }
 
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+5\) MainActivity의 onCreate 안에 TabLayout에 대한 설정을 한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="MainActivity.java" %}
+```java
+TabLayout tabs = findViewById(R.id.tabs);
+tabs.addTab(tabs.newTab().setText("친구"));
+tabs.addTab(tabs.newTab().setText("일대일채팅"));
+tabs.addTab(tabs.newTab().setText("기타"));
+
+tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+        int position = tab.getPosition();
+        Fragment selected = null;
+        if(position == 0){
+            selected = firstFragment;
+        }else if(position == 1){
+            selected = secondFragment;
+        }else if(position == 2){
+            selected = thirdFragment;
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,selected).commit();
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
+
+    }
+});
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![](../.gitbook/assets/tab.gif)
 
