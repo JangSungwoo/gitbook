@@ -122,6 +122,8 @@ pager.setAdapter(adapter);
 
 
 
+{% embed url="https://developer.android.com/training/animation/screen-slide.html" %}
+
 
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17078/" %}
