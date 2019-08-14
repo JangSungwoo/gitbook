@@ -61,7 +61,234 @@ transaction.addToBackStack(null);
 transaction.commit();
 ```
 
+## 액티비티와의 통신 
+
+프래그먼트는 getActivity\(\)를 사용하여 액티비티의 레이아웃의 뷰와 메서드를 호출 할 수 있다.
+
+getActivity\(\)는 fragment가 시작할 때 가장 먼저 시작되는 onAttach\(\) 에 선언 하는것이 좋다. 
+
+```java
+MainActivity activity = (MainActivity) getActivity();
+ListView lst = activity.findViewById(R.id.list);
+activity.setImage(R.drawable.user);
+```
+
+반대로, 액티비티도 FragmentManager로 부터 Fragment를 참초하여 가져올 수 있다.
+
+```java
+ExampleFragment fragment = (ExampleFragment) getFragmentManager().findFragmentById(R.id.example_fragment);
+```
+
 ## 프래그먼트 생명주기 
+
+![](../.gitbook/assets/frament_lifecycle_2.png)
+
+## 예제 
+
+{% code-tabs %}
+{% code-tabs-item title="MainActivity.java" %}
+```java
+public class MainActivity extends AppCompatActivity {
+
+    MainFragment mainFragment;
+    MenuFragment menuFragment;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mainFragment = new MainFragment();
+        menuFragment = new MenuFragment();
+//
+        Button btnToMain = findViewById(R.id.btn_to_main);
+        btnToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //activity_main의 container에 mainFragment 연결
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
+            }
+        });
+        Button btnToMenu = findViewById(R.id.btn_to_menu);
+        btnToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,menuFragment).commit();
+            }
+        });
+    }
+    public void onFragmentChange(int index){
+        if(index == 0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
+        }else if (index == 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,menuFragment).commit();
+        }
+    }
+}
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="MainFragment.java" %}
+```java
+public class MainFragment extends Fragment {
+
+    MainActivity activity;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        activity = (MainActivity) getActivity();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        activity = null;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_main,container,false);
+
+        Button btnToMenu = rootView.findViewById(R.id.btn_to_menu);
+        btnToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onFragmentChange(1);
+            }
+        });
+        return rootView;
+    }
+}
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="MenuFragment.java" %}
+```java
+public class MenuFragment extends Fragment {
+    MainActivity activity;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        activity = (MainActivity) getActivity();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        activity = null;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_menu,container,false);
+
+
+        Button btnToMain = rootView.findViewById(R.id.btn_to_main);
+        btnToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onFragmentChange(0);
+            }
+        });
+        return rootView;
+    }
+}
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="activity\_main.xml" %}
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메인" />
+    <Button
+        android:id="@+id/btn_to_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_toEndOf="@+id/btn_to_main"
+        android:layout_toRightOf="@+id/btn_to_main"
+        android:text="메뉴" />
+    <FrameLayout
+
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_to_main">
+
+        <!--<fragment-->
+            <!--android:id="@+id/fragment_main"-->
+            <!--android:name="com.example.examfragment.MainFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+    </FrameLayout>
+
+
+</RelativeLayout>
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="fragment\_main.xml" %}
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프래그먼트 1"
+        />
+
+    <Button
+        android:id="@+id/btn_to_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메뉴화면으로"/>
+</LinearLayout>
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="fragment\_menu.xml" %}
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프래그먼트 2" />
+
+    <Button
+        android:id="@+id/btn_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메인화면으로" />
+</LinearLayout>
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![](../.gitbook/assets/fragment.gif)
 
 ## 
 
