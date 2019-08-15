@@ -48,16 +48,11 @@ commit\(\)이전의 addToBackStack\(null\) 을 통해 이전상태\(예시에서
 사용자가 Back 버튼을 누름으로써 트랜잭션을 되돌리고 이전 프래그먼트를 다시 가져올 수 있다. 
 
 ```java
-// Create new fragment and transaction
-Fragment newFragment = new ExampleFragment();
-FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-// Replace whatever is in the fragment_container view with this fragment,
-// and add the transaction to the back stack
-transaction.replace(R.id.fragment_container, newFragment);
+MainFragment mainFragment = new MainFragment();
+FragmentManager fragmentManager = getSupportFragmentManager();
+FragmentTransaction transaction = fragmentManager.beginTransaction();
+transaction.replace(R.id.container,mainFragment);
 transaction.addToBackStack(null);
-
-// Commit the transaction
 transaction.commit();
 ```
 
@@ -83,7 +78,7 @@ ExampleFragment fragment = (ExampleFragment) getFragmentManager().findFragmentBy
 
 ![](../.gitbook/assets/frament_lifecycle_2.png)
 
-![](../.gitbook/assets/activity_fragment_lifecycle.png)
+![](../.gitbook/assets/activity_fragment_lifecycle2.png)
 
 ## 액티비티와 프래그먼트 간 데이터 전달 
 
