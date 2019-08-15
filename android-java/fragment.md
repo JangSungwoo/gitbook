@@ -83,6 +83,8 @@ ExampleFragment fragment = (ExampleFragment) getFragmentManager().findFragmentBy
 
 ![](../.gitbook/assets/frament_lifecycle_2.png)
 
+![](../.gitbook/assets/activity_fragment_lifecycle.png)
+
 ## 액티비티와 프래그먼트 간 데이터 전달 
 
 데이터 송신 
