@@ -56,6 +56,8 @@ transaction.addToBackStack(null);
 transaction.commit();
 ```
 
+![](../.gitbook/assets/fragment_addtobackstack.gif)
+
 ## 액티비티와의 통신 
 
 프래그먼트는 getActivity\(\)를 사용하여 액티비티의 레이아웃의 뷰와 메서드를 호출 할 수 있다.
