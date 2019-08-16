@@ -47,7 +47,7 @@
 * [Toolbar 버튼](android-java/toolbar.md)
 * [unescaped apostrophe in string](android-java/unescaped-apostrophe-in-string.md)
 * [setSupportActionBar 에러](android-java/untitled-2.md)
-* [Untitled](android-java/untitled-3.md)
+* [TextView align](android-java/untitled-3.md)
 
 ## Android-Kotlin
 
