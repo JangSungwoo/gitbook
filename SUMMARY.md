@@ -48,6 +48,7 @@
 * [unescaped apostrophe in string](android-java/unescaped-apostrophe-in-string.md)
 * [setSupportActionBar 에러](android-java/untitled-2.md)
 * [TextView align](android-java/untitled-3.md)
+* [ArrayList sort](android-java/arraylist-sort.md)
 
 ## Android-Kotlin
 
