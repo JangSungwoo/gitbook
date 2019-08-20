@@ -38,7 +38,7 @@
 * [JSON](android-java/json.md)
 * [Gson](android-java/gson.md)
 * [Image Download From Web](android-java/image-download-from-web.md)
-* [Movie API](android-java/movie-api.md)
+* [영화 API](android-java/movie-api.md)
 * [외부라이브러리를 참조하는 방법](android-java/undefined-2.md)
 * [프로젝트 경로 변경하는 법](android-java/undefined.md)
 * [화면 전환 시 객체를 전달하는 방법](android-java/undefined-1.md)
