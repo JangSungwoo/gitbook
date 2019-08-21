@@ -97,6 +97,14 @@ thread.start();
                 ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
                 Object input = inputStream.readObject();
                 Log.d("ClientThread","받은 데이터 :"+input);
+                
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        txtReceiveData.setText("받은 데이터 : "+ input);
+                    }
+                });
+                
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {
