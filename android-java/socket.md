@@ -119,7 +119,11 @@ clientThread.start();
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+### 권한 부여 
 
+```text
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17088/" %}
 
