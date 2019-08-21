@@ -133,6 +133,91 @@ clientThread.start();
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
+## 죽지않는 서비스로 서버 시작 
+
+### 서비스 구현 
+
+서비스에서 서버시작을 하여 앱이 종료되었을때에도 서버가 종료되지 않도록 한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="ChatService.java" %}
+```java
+public class ChatService extends Service {
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        StartForeground();
+        ServerThread thread = new ServerThread();
+        thread.start();
+    }
+
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    private void StartForeground() {
+        NotificationCompat.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            builder = new NotificationCompat.Builder(this, "channel_id");
+        } else {
+            builder = new NotificationCompat.Builder(this);
+        }
+        builder.setSmallIcon(R.drawable.ic_launcher_foreground);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(new NotificationChannel("channel_id", "ch foreground", NotificationManager.IMPORTANCE_LOW));
+        }
+        startForeground(1, builder.build());
+    }
+
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### 서비스 등록 
+
+{% code-tabs %}
+{% code-tabs-item title="AndroidManifest.xml" %}
+```markup
+<service android:name=".ChatService" />
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### 서비스 시작 
+
+{% code-tabs %}
+{% code-tabs-item title="MainActivity.java" %}
+```java
+Intent intent = new Intent(getApplicationContext(),ChatService.class);
+if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ){
+    startForegroundService(intent);
+}else{
+    startService(intent);
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% hint style="info" %}
+안드로이드 Oreo 버전 이상에서는 백그라운드를 허용하지 않기 때문에 `startForgroundService(intent)`로 서비스를시작하고 `startForeground(1,builder.build())`를 사용하여 죽지 않는 서비스를 구현해야 한다. 
+{% endhint %}
+
+![](../.gitbook/assets/socket_service.gif)
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17088/" %}
 
 
