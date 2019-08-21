@@ -46,15 +46,15 @@ dependencies {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 3\) AppHelper 클래스 정의 
+### 3\) static 사용 변수 선언\(RequestQueue, request 관련정보\)
 
 {% code-tabs %}
 {% code-tabs-item title="AppHelper.java" %}
 ```java
 public class AppHelper {
-
     public static RequestQueue requestQueue;
-
+    public static String host = "boostcourse-appapi.connect.or.kr";
+    public static int port = 10000;
 }
 ```
 {% endcode-tabs-item %}
