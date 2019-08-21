@@ -30,12 +30,22 @@ description: '#부스트코스'
 
 ### 서버 생성 
 
+1\) `ServerSocket` 클래스의 객체를 생성하고 `port`를 지정한다.
+
+2\) `Socket` 클래스의 객체를 생성하고 `accept()` 로 클라이언트의 접속을 기다린다. 
+
+3\) `getInputStream()`로 초기화 한 `ObjectInputStream` 의 객체를 통해  `readObject()` 로 데이터를 가져온다. 
+
+4\) `getOutputStream()`로 초기화 한 `ObjectOutputStream` 의 객체를 통해  `writeObject()` 로 데이터를 전달한다.
+
+5\) 통신이 종료되었으므로 소켓을 종료한다. 
+
 {% code-tabs %}
 {% code-tabs-item title="ServerThread.java" %}
 ```java
 class ServerThread extends Thread {
     public void run() {
-        int port = 5001;
+        int port = 5002;
         try {
             ServerSocket server = new ServerSocket(port);
             Log.d("ServerThread", "서버가 실행됨");
@@ -79,13 +89,21 @@ thread.start();
 
 ### 클라이언트 생성
 
+1\) `Socket` 클래스의 객체를 생성하고  host 주소와 port 번호로 서버에 접속을 한다. 
+
+2\) `getOutputStream()`로 초기화 한 `ObjectOutputStream` 의 객체를 통해  `writeObject()` 로 데이터를 전달한다.
+
+3\) `getInputStream()`로 초기화 한 `ObjectInputStream` 의 객체를 통해  `readObject()` 로 데이터를 가져온다. 
+
+4\) 받은 데이터는 `handler`를 사용하여 UI 의 정보 변경한다. 
+
 {% code-tabs %}
 {% code-tabs-item title="ClientThread.java" %}
 ```java
  class ClientThread extends Thread{
         public void run(){
             String host = "localhost";
-            int port = 5001;
+            int port = 5002;
             try {
                 Socket socket = new Socket(host,port);
 
@@ -175,6 +193,7 @@ public class ChatService extends Service {
             builder = new NotificationCompat.Builder(this);
         }
         builder.setSmallIcon(R.drawable.ic_launcher_foreground);
+        builder.setContentText("Socket Server 가 실행 중 입니다.");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.createNotificationChannel(new NotificationChannel("channel_id", "ch foreground", NotificationManager.IMPORTANCE_LOW));
@@ -213,7 +232,7 @@ if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ){
 {% endcode-tabs %}
 
 {% hint style="info" %}
-안드로이드 Oreo 버전 이상에서는 백그라운드를 허용하지 않기 때문에 `startForgroundService(intent)`로 서비스를시작하고 `startForeground(1,builder.build())`를 사용하여 죽지 않는 서비스를 구현해야 한다. 
+안드로이드 Oreo 버전 이상에서는 백그라운드를 허용하지 않기 때문에 `startForgroundService(intent)`로 서비스를시작하고 push 알림을 띄우는`startForeground(1,builder.build())`를 사용하여 죽지 않는 서비스를 구현해야 한다. 
 {% endhint %}
 
 ![](../.gitbook/assets/socket_service.gif)
