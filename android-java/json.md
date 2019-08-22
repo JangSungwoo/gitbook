@@ -47,6 +47,8 @@ description: '#부스트코스'
     }
 ```
 
+![](../.gitbook/assets/json.gif)
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17092/" %}
 
 
