@@ -91,6 +91,12 @@ RequestThread thread = new RequestThread();
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+### 권한 부여 
+
+```markup
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
 ### 전체 소스코드
 
 {% code-tabs %}

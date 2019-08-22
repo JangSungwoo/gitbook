@@ -147,7 +147,7 @@ clientThread.start();
 
 ### 권한 부여 
 
-```text
+```markup
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
