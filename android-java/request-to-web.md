@@ -175,6 +175,8 @@ public class MainActivity extends AppCompatActivity {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% embed url="https://developer.android.com/training/basics/network-ops/connecting.html" %}
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/20488/" %}
 
 
