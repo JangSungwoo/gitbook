@@ -4,14 +4,6 @@ description: '#부스트코스'
 
 # Image Download From Web
 
-
-
-### 권한 부여 
-
-```markup
-<uses-permission android:name="android.permission.INTERNET" />
-```
-
 ### AsyncTask로 이미지 다운로드하기 
 
 1\) 생성자에서는 전달받은 이미지 주소와 ImageView의 값을 가져온다.
@@ -83,6 +75,12 @@ public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+### 권한 부여 
+
+```markup
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
 ### 이미지 다운로드 사용 
 
