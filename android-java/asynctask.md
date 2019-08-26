@@ -18,7 +18,7 @@ description: '#부스트코스'
 
 3\) onPostExcute
 
-* onInBackground의 작업이 완되면 호출 
+* onInBackground의 작업이 완료되면 호출 
 
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
