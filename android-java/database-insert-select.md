@@ -98,8 +98,13 @@ price 컬럼을 GROUP BY 로 설정된 department 컬럼으로 합계를 구하�
 WHERE절에서는 집계함수를 사용할 수 없기 때문에 HAVING 절을 사용하여 조건비교를 한다. 그러므로 HAVING 절은 GROUP BY와 함께 쓰인다. 
 
 ```text
-SELECT b.dname, COUNT(a.
+SELECT department, SUM(price) as total_price 
+FROM receipt 
+GROUP BY department 
+HAVING department != 'HR'
 ```
+
+위의 쿼리문은 HR 부서만 제외하고 식비를 부서별로 계산한 내역이다. 
 
 ### 정렬 조회 \( ORDER BY \) 
 
