@@ -71,12 +71,6 @@ SELECT department, SUM(price) as total_price FROM receipt GROUP BY department
 
 ![](../.gitbook/assets/select_group_by.png)
 
-{% hint style="info" %}
-SUM\(price\) as total\_price ... GROUP BY department
-
-price 컬럼을 GROUP BY 로 설정된 department 컬럼으로 합계를 구하여 total\_price라고 정한다.
-{% endhint %}
-
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
 
 
