@@ -38,6 +38,12 @@ database = helper.getWritableDatabase();
 
 getWriteableDatabase\(\)는 데이터베이스를 읽고 쓰기위해서 설정하는 메소드이다. 
 
+{% embed url="https://developer.android.com/training/data-storage/room/index.html" %}
+
+{% embed url="https://gyjmobile.tistory.com/entry/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%B1-%EB%9F%B0%EC%B9%AD%ED%9B%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B3%80%EA%B2%BD%EC%8B%9C-%EC%A3%BC%EC%9D%98%ED%95%A0%EC%A0%90" %}
+
+{% embed url="https://developer.android.com/guide/topics/providers/content-provider-creating.html?hl=ko" %}
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17121/" %}
 
 
