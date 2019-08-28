@@ -97,6 +97,16 @@ price 컬럼을 GROUP BY 로 설정된 department 컬럼으로 합계를 구하�
 
 WHERE절에서는 집계함수를 사용할 수 없기 때문에 HAVING 절을 사용하여 조건비교를 한다. 그러므로 HAVING 절은 GROUP BY와 함께 쓰인다. 
 
+```text
+SELECT b.dname, COUNT(a.
+```
+
+### 정렬 조회 \( ORDER BY \) 
+
+ORDER BY 기준컬럼 DESC : 내림차순 정렬 
+
+ORDER BY 기준컬럼 ASC : 오름차순 정렬 
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
 
 
