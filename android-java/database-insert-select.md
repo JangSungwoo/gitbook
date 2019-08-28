@@ -63,6 +63,12 @@ SELECT * FROM employee WHERE age < 24 or age > 29
 SELECT DISTINCT name, age, phone FROM employee 
 ```
 
+```text
+SELECT name, age, phone FROM employee GROUP BY name
+```
+
+GROUP BY 를 사용하여 중복 제거 조회도 가능하다. 
+
 ### 그룹별 조회 
 
 ```text
