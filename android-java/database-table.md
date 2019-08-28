@@ -26,6 +26,27 @@ description: '#부스트코스'
 
 
 
+### 데이터베이스 열거나 삭제 
+
+```java
+public abstract SQLiteDatabase openOrCreateDatabase(String name, int mode, SQLiteDatabase.CursorFactory factory)
+public abstract boolean deleteDatabase(String name)
+```
+
+### SQL 실행 메소드 
+
+* create, insert, delete 등 결과데이터가 없는 SQL문 
+
+```java
+public void execSQL(String sql) throws SQLException 
+```
+
+* select 와 같이 조회에 따른 결과 데이터가 있는 SQL문 
+
+```java
+public cursor rawQuery(String sql) throws SQLException 
+```
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17119/" %}
 
 
