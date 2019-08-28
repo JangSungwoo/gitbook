@@ -63,7 +63,11 @@ SELECT * FROM employee WHERE age < 24 or age > 29
 SELECT DISTINCT name, age, phone FROM employee 
 ```
 
+### 그룹별 조회 
 
+```text
+SELECT department, SUM(price) as total_price FROM receipt GROUP BY department
+```
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
 
