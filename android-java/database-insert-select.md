@@ -69,7 +69,23 @@ SELECT DISTINCT name, age, phone FROM employee
 SELECT department, SUM(price) as total_price FROM receipt GROUP BY department
 ```
 
+다음 사진은 쿼리문 실행 결과를 나타낸다. 
+
+부서별로 먹은 음식의 가격을 합산한 결과이다.
+
 ![](../.gitbook/assets/select_group_by.png)
+
+{% hint style="info" %}
+SUM\(price\) as total\_price ... GROUP BY department
+
+price 컬럼을 GROUP BY 로 설정된 department 컬럼으로 합계를 구하여 total\_price라고 정한다.
+
+SUM\( \) : 합계 
+
+AVG\( \) : 평균 
+
+COUNT\( \) : 개수 
+{% endhint %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
 
