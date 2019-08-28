@@ -16,7 +16,8 @@ public SQLiteOpenHelper(Context context, String name, SQLiteDatabase.CursorFacto
 
 ### onOpen\(\)
 
-* 
+* 데이터베이스 스키마가 생성되는 connection 된 후에 호출된다. 
+
 ### onUpgrade\(\)
 
 * 테이블이 변경되어야 하는 등 단말에 저장된 데이터베이스의 구조가 바뀌어야 하는 경우에 사용 
@@ -27,6 +28,15 @@ SQLiteOpenHelper 사용시 getWritableDatabase\(\) 메소드를 사용하더라�
 
 동일한 이름의 db가 있다면 onCreate\( \) 가 호출되지 않는다.
 {% endhint %}
+
+### 헬퍼 사용
+
+```java
+DatabaseHelper helper = new DatabaseHelper(context, databaseName, null, 1);
+database = helper.getWritableDatabase();
+```
+
+getWriteableDatabase\(\)는 데이터베이스를 읽고 쓰기위해서 설정하는 메소드이다. 
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17121/" %}
 
