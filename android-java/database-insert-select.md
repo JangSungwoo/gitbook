@@ -4,7 +4,7 @@ description: '#부스트코스'
 
 # DataBase, INSERT, SELECT
 
-## 데이터 저장하기 
+## 데이터 저장하기 \( INSERT \)
 
 ```text
 INSERT INTO 테이블명 (칼럼명1, 칼럼명2, ...) VALUES(값1, 값2, ...)
@@ -29,7 +29,7 @@ Object[] params = {id, name, age, phone};
 database.execSQL(sql, params);
 ```
 
-## 데이터 조회하기
+## 데이터 조회하기 \( SELECT \)
 
 ### 전체 데이터 조회 
 
@@ -46,7 +46,7 @@ SELECT name FROM employee
 SELECT name, age FROM employee
 ```
 
-### 조건 조회 
+### 조건 조회 \( WHERE \)
 
 ```text
 //조건 하나로 조회
@@ -57,7 +57,7 @@ SELECT * FROM employee WHERE age > 24 AND age < 29
 SELECT * FROM employee WHERE age < 24 or age > 29
 ```
 
-### 중복 제거 조회 
+### 중복 제거 조회 \( DISTINCT \)
 
 ```text
 SELECT DISTINCT name, age, phone FROM employee 
@@ -69,7 +69,7 @@ SELECT name, age, phone FROM employee GROUP BY name
 
 GROUP BY 를 사용하여 중복 제거 조회도 가능하다. 
 
-### 그룹별 조회 
+### 그룹별 조회 \( GROUP BY \)
 
 ```text
 SELECT department, SUM(price) as total_price FROM receipt GROUP BY department
@@ -92,6 +92,10 @@ price 컬럼을 GROUP BY 로 설정된 department 컬럼으로 합계를 구하�
 * MIN\( \) : 최소 값 
 * MAX\( \) : 최대 값  
 {% endhint %}
+
+### 그룹별 조건 조회 \( GROUP BY ... HAVING \)
+
+WHERE절에서는 집계함수를 사용할 수 없기 때문에 HAVING 절을 사용하여 조건비교를 한다. 그러므로 HAVING 절은 GROUP BY와 함께 쓰인다. 
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
 
