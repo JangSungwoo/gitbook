@@ -80,11 +80,11 @@ SUM\(price\) as total\_price ... GROUP BY department
 
 price 컬럼을 GROUP BY 로 설정된 department 컬럼으로 합계를 구하여 total\_price라고 정한다.
 
-SUM\( \) : 합계 
-
-AVG\( \) : 평균 
-
-COUNT\( \) : 개수 
+* SUM\( \) : 합계 
+* AVG\( \) : 평균 
+* COUNT\( \) : 개수 
+* MIN\( \) : 최소 값 
+* MAX\( \) : 최대 값  
 {% endhint %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
