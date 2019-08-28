@@ -51,26 +51,26 @@ CREATE TABLE tablename(
 DROP TABLE tablename;
 ```
 
-### 튜플 추가 
+### 레코드 추가 
 
 ```text
 INSERT INTO Accounts(accountNumber, balance, accountName) 
 VALUES('22222', 100000, 'Ample Rich");
 ```
 
-### 튜플 갱신 
+### 레코드 갱신 
 
 ```text
 UPDATE city SET population=40000 WHERE name='Langsaen' AND countrycode='THA';
 ```
 
-### 튜플 삭제 
+### 레코드 삭제 
 
 ```text
 DELETE FROM city WHERE population <= 0;
 ```
 
-### 튜플 조회 
+### 데이터 조회 
 
 ```text
 SELECT * FROM city WHERE population > 5000000 
