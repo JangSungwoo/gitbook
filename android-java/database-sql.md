@@ -34,6 +34,51 @@ description: '#부스트코스'
 
 데이터베이스를 구성하는 레코드의 크기, 키\(key\)의 정의, 레코드와 레코드의 관계, 검색 방법 등을 정의한  것.
 
+### 테이블 생성 
+
+```text
+CREATE TABLE tablename(
+    accountNumber    VARCHAR(8) NOT NULL,
+    clientID    VARCHAR(40) NOT NULL,
+    balance    DOUBLE DEFAULT '0',
+    availableBalance DOUBLE DEFAULT '0'
+);
+```
+
+### 테이블 삭제
+
+```text
+DROP TABLE tablename;
+```
+
+### 튜플 추가 
+
+```text
+INSERT INTO Accounts(accountNumber, balance, accountName) 
+VALUES('22222', 100000, 'Ample Rich");
+```
+
+### 튜플 갱신 
+
+```text
+UPDATE city SET population=40000 WHERE name='Langsaen' AND countrycode='THA';
+```
+
+### 튜플 삭제 
+
+```text
+DELETE FROM city WHERE population <= 0;
+```
+
+### 튜플 조회 
+
+```text
+SELECT * FROM city WHERE population > 5000000 
+ORDER BY population DESC; 
+```
+
+{% embed url="https://ko.wikipedia.org/wiki/%EA%B4%80%EA%B3%84%ED%98%95\_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4" %}
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17118/" %}
 
 
