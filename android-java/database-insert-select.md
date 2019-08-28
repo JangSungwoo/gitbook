@@ -112,6 +112,32 @@ ORDER BY 기준컬럼 DESC : 내림차순 정렬
 
 ORDER BY 기준컬럼 ASC : 오름차순 정렬 
 
+## 커서 다루기 
+
+rawQuery 메소드를 호출했을 때 반환되는 객체는 Cursor 이다. 
+
+Cursor를 통해 조회 된 데이터를 하나씩 확인할 수 있다. 
+
+### Cursor 
+
+#### 이동 
+
+* moveToNext : 다음 레코드로 이동
+* moveToPrevious : 이전 레코드로 이동 
+* moveToFirst : 처음 레코드로 이동 
+* moveToLast : 마지막 레코드로 이동 
+* moveToPosition : 원하는 번째의 레코드로 이동 
+
+#### 컬럼 값 정보 
+
+* getColumnIndex\( "컬럼명" \) : 컬럼명에 해당하는 인덱스 가져오기 
+* getColumnName\(컬럼인덱스\) : 컬럼인덱스에 해당하는 컬럼명 가져오기 
+
+#### **데이터 가져오기** 
+
+* getString\(\), getInt\(\) 과 같은 해당하는 자료형 함수로 데이터를 가져올 수 있다.
+* String str = getString\(컬럼인덱스\); 
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17120/" %}
 
 
