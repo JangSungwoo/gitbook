@@ -175,3 +175,5 @@ public class SoundAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% embed url="https://medium.com/@droidbyme/android-recyclerview-with-single-and-multiple-selection-5d50c0c4c739" %}
+
