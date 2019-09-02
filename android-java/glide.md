@@ -18,6 +18,8 @@ Glide.with(this)
         .into(imageView);
 ```
 
+{% embed url="https://bumptech.github.io/glide/doc/caching.html" %}
+
 {% embed url="https://github.com/bumptech/glide/wiki/Configuration" %}
 
 
