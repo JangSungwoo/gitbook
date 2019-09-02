@@ -18,3 +18,7 @@ Glide.with(this)
         .into(imageView);
 ```
 
+{% embed url="https://github.com/bumptech/glide/wiki/Configuration" %}
+
+
+
