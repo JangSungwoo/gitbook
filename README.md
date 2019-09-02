@@ -3,6 +3,9 @@
 2010
 
 * 전자공학 전공
+* MX 학술동아리 활동
+* * PCB artwork
+  * AVR을 이용한 프로젝트\( 주차예약시스템, 라인트레이서, 블루투스 LED, Motion Controller\)
 
 2016
 
