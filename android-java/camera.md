@@ -147,6 +147,79 @@ private void capture() {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+### 미리보기를 위한 SurfaceView
+
+#### 1\) SufaceView를 제어할 holder를 가져오고 SurfaceHolder.Callback 을 추가 
+
+{% code-tabs %}
+{% code-tabs-item title="CameraSufaceView.java" %}
+```java
+private void init() {
+        holder = getHolder();
+        holder.addCallback(this);
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### 2\)  SurfaceHolder.Callback의 메소 구현 
+
+* surfaceCreated : 생성시 호출
+* surfaceChanged : 변경시 호출
+* surfaceDestroyed : 종료시 호출 
+
+카메라를 열고 미리보기 설정을 한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="CameraSufaceView.java" %}
+```java
+//생성시 호출
+    @Override
+    public void surfaceCreated(SurfaceHolder holder) {
+        camera = Camera.open();
+
+        try {
+            camera.setPreviewDisplay(holder);
+
+        } catch (Exception e) {
+
+        }
+    }
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+미리보기를 시작한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="CameraSufaceView.java" %}
+```java
+//변경시 호출
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+        camera.startPreview();
+
+    }
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+종료시 미리보기를 종료하고 할당한 메모리를 해제한다. 
+
+{% code-tabs %}
+{% code-tabs-item title="CameraSufaceView.java" %}
+```java
+//종료시 호출
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+        camera.stopPreview();
+        camera.release();
+        camera = null;
+    }
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ### 전체 소스코드 
 
 {% code-tabs %}
