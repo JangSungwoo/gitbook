@@ -120,8 +120,9 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String[] permis
             }else{
                 Toast.makeText(this, "SMS 수신 권한을 부여받지 못함", Toast.LENGTH_LONG).show();
             }
-        }
     }
+}
+
 ```
 
 {% hint style="info" %}
