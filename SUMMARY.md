@@ -80,6 +80,7 @@
 * [RecyclerView에서 RadioButton Single choice](android-java/recyclerview-radiobutton-single-choice.md)
 * [SQL JOIN](android-java/sql-join.md)
 * [MVC, MVP, MVVM](android-java/mvc-mvp-mvvm.md)
+* [Dialog 테두리 배경 설정](android-java/dialog.md)
 
 ## Android-Kotlin
 
