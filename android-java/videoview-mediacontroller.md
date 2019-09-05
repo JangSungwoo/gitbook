@@ -44,12 +44,11 @@ private void playVideo() {
 
 ### 3\) 동영상 재생 
 
-```text
+```java
 Button btnPlay = findViewById(R.id.btn_play);
 btnPlay.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        videoView.seekTo(0);
         videoView.start();
     }
 });
@@ -61,6 +60,10 @@ btnPlay.setOnClickListener(new View.OnClickListener() {
 seekTo\(int msec\) : 재생 위치 설정
 
 start\(\) : 재생 시 
+
+pause\(\) : 일시정지 시
+
+resume\(\) : 다시 재생 시 
 {% endhint %}
 
 ![](../.gitbook/assets/videoview.gif)
