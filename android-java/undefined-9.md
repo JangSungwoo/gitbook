@@ -87,6 +87,10 @@ description: '#부스트코스'
   </tbody>
 </table>## 위험 권한 부여 방법 
 
+* ContextCompat.checkSelfPermission : 권한 부여 여부
+* ActivityCompat.shouldShowRequestPermissionRationale : 해당 권한 거부\(true\), 다시묻지않음 또는 기기에서 해당 권한 금지 시 false 반
+* requestPermission : 권한 요청
+
 권한이 여러개인경우 String\[\] 로 값을 넣어 `requestPermission()` 을 통해 넘겨준다.
 
 {% code-tabs %}
