@@ -87,41 +87,80 @@ description: '#부스트코스'
   </tbody>
 </table>## 위험 권한 부여 방법 
 
+{% code-tabs %}
+{% code-tabs-item title="MainActivity.java" %}
 ```java
-private void initPermission() {
-    //Manifest의 권한 확인 
-    int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS);
-    //권한 여부 확인 
-    if(permissionCheck == PackageManager.PERMISSION_GRANTED){
-        Toast.makeText(this, "SMS 수신 권한 주어져 있음.",Toast.LENGTH_LONG).show();
-    }else{
-        Toast.makeText(this,"SMS 수신 권한 없음",Toast.LENGTH_LONG).show();
-        if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.RECEIVE_SMS)){
-            Toast.makeText(this,"SMS 권한 설명 필요함",Toast.LENGTH_LONG).show();
-        }else{
-            //권한 요청 
-            ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.RECEIVE_SMS},1);
-        }
-    }
-}
+String[] permissions = {
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.RECORD_AUDIO,
+};
+initPermission(permissions,REQUEST_CODE_READ_EXTERNAL_STORAGE);
+initPermission(permissions,REQUEST_CODE_WRITE_EXTERNAL_STORAGE);
+initPermission(permissions,REQUEST_CODE_RECORD_AUDIO);
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
-@Override
-public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-    switch (requestCode){
-        case 1:
-            if(grantResults.length > 0) {
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "SMS 수신 권한을 사용자가 승인함", Toast.LENGTH_LONG).show();
-                } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
-                    Toast.makeText(this, "SMS 수신 권한을 사용자가 거부함", Toast.LENGTH_LONG).show();
+```java
+private void initPermission(String[] permissions, int requestCode) {
+            //Manifest의 권한 확인
+            int permissionCheck = ContextCompat.checkSelfPermission(this, permissions[requestCode-1] );
+            //권한 여부 확인
+            if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "권한 주어져 있음.", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "권한 없음", Toast.LENGTH_LONG).show();
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this, permissions[requestCode-1])) {
+                    Toast.makeText(this, "권한 설명 필요함", Toast.LENGTH_LONG).show();
+                } else {
+                    //권한 요청
+                    ActivityCompat.requestPermissions(this, permissions, requestCode);
                 }
-            }else{
-                Toast.makeText(this, "SMS 수신 권한을 부여받지 못함", Toast.LENGTH_LONG).show();
             }
     }
-}
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode) {
+            case REQUEST_CODE_READ_EXTERNAL_STORAGE:
+                if (grantResults.length > 0) {
+                    if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        Toast.makeText(this, "권한을 사용자가 승인함", Toast.LENGTH_LONG).show();
+                    } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                        Toast.makeText(this, "권한을 사용자가 거부함", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(this, "권한을 부여받지 못함", Toast.LENGTH_LONG).show();
+                }
+                break;
+            case REQUEST_CODE_WRITE_EXTERNAL_STORAGE:
+                if (grantResults.length > 0) {
+                    if (grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                        Toast.makeText(this, "권한을 사용자가 승인함", Toast.LENGTH_LONG).show();
+                    } else if (grantResults[1] == PackageManager.PERMISSION_DENIED) {
+                        Toast.makeText(this, "권한을 사용자가 거부함", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(this, "권한을 부여받지 못함", Toast.LENGTH_LONG).show();
+                }
+                break;
+            case REQUEST_CODE_RECORD_AUDIO:
+                if (grantResults.length > 0) {
+                    if (grantResults[2] == PackageManager.PERMISSION_GRANTED) {
+                        Toast.makeText(this, "권한을 사용자가 승인함", Toast.LENGTH_LONG).show();
+                    } else if (grantResults[2] == PackageManager.PERMISSION_DENIED) {
+                        Toast.makeText(this, "권한을 사용자가 거부함", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(this, "권한을 부여받지 못함", Toast.LENGTH_LONG).show();
+                }
+                break;
+
+        }
+    }
 
 ```
 
