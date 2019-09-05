@@ -87,6 +87,8 @@ description: '#부스트코스'
   </tbody>
 </table>## 위험 권한 부여 방법 
 
+권한이 여러개인경우 String\[\] 로 값을 넣어 `requestPermission()` 을 통해 넘겨준다.
+
 {% code-tabs %}
 {% code-tabs-item title="MainActivity.java" %}
 ```java
