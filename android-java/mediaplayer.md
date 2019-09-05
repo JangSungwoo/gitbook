@@ -10,10 +10,10 @@ description: '#부스트코스'
 
 ```java
 private void playUriMusic() {
-    String url = "https://www.all-birds.com/Sound/western%20bluebird.wav";
+    String url = "https://sites.google.com/site/ubiaccessmobile/sample_audio.amr";
     mediaPlayer = new MediaPlayer();
     try {
-        mediaPlayer.reset();
+        closePlayer();
         mediaPlayer.setDataSource(url);
         mediaPlayer.prepare();
         mediaPlayer.start();
