@@ -68,3 +68,9 @@ resume\(\) : 다시 재생 시
 
 ![](../.gitbook/assets/videoview.gif)
 
+{% embed url="https://developer.android.com/guide/topics/media/mediaplayer.html" %}
+
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/17105/" %}
+
+
+
