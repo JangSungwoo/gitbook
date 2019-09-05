@@ -4,10 +4,17 @@ description: '#부스트코스'
 
 # RecyclerView
 
+### build.gradle 참
+
+```text
+dependencies {
+    ...
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta03'
+}
+```
+
 ### layout
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
 ```markup
 <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/recycler_view_sound"
@@ -16,8 +23,6 @@ description: '#부스트코스'
     android:paddingHorizontal="24dp"
     android:paddingVertical="16dp" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### RecyclerView 사용
 
@@ -59,9 +64,10 @@ soundAdater.setOnItemClickListener(new SoundAdapter.OnItemClickListener() {
 
 ### Adapter 구현 
 
-RecyclerView는 Adapter를 ViewHolder 패턴을 사용하여 구현한다. 
+* onCreateViewHolder : 각 아이템을 위한 xml 레이아웃을 이용해 뷰 객체 생성 후 반환 
+* onBindViewHolder : 각 아이템의 데이터를 설정 \(예제에서 ViewHolder의 setItem을 통해\) 
 
-
+RecyclerView는 Adapter를 ViewHolder 패턴을 사용하여 각각의 뷰를 뷰 홀더에 담아둔다. 
 
 {% code-tabs %}
 {% code-tabs-item title="SoundAdapter.java" %}
@@ -154,7 +160,13 @@ public class SoundAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 아이템 정
+{% hint style="info" %}
+Item 의 레이아웃 형태가 다른경우에는 새로운 ViewHolder를 생성하고  
+
+onCreateViewHolder, onBindViewHolder 에서 따로 처리를 해줄 수 있다. 
+{% endhint %}
+
+### 아이템 정의 
 
 {% code-tabs %}
 {% code-tabs-item title="SoundItem.java" %}
@@ -169,4 +181,10 @@ public class SoundItem {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+{% embed url="https://academy.realm.io/kr/posts/gotocph-israel-ferrer-camacho-android-ui/" %}
+
+{% embed url="https://www.edwith.org/boostcourse-android/lecture/20492/" %}
+
+
 
