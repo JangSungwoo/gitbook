@@ -6,7 +6,7 @@ description: '#부스트코스'
 
 ## 음악 재생
 
-### 인터넷음악 재생 
+### 인터넷 음악 재생 
 
 ```java
 private void playUriMusic() {
@@ -22,6 +22,12 @@ private void playUriMusic() {
         e.printStackTrace();
     }
 }
+```
+
+### 권한 부여 
+
+```markup
+<uses-permission android:name="android.permission.INTERNET"/>
 ```
 
 ### 프로젝트 음악 재생 
