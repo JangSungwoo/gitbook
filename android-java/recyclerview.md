@@ -4,7 +4,7 @@ description: '#부스트코스'
 
 # RecyclerView
 
-### build.gradle 참
+### build.gradle 참조 
 
 ```text
 dependencies {
@@ -13,7 +13,7 @@ dependencies {
 }
 ```
 
-### layout
+### 레이아웃 사용 
 
 ```markup
 <androidx.recyclerview.widget.RecyclerView
@@ -58,6 +58,22 @@ soundAdater.setOnItemClickListener(new SoundAdapter.OnItemClickListener() {
         Toast.makeText(getApplicationContext(), "아이템 클릭 : " + item.title, Toast.LENGTH_LONG).show();
     }
 });
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### 아이템 정의 
+
+{% code-tabs %}
+{% code-tabs-item title="SoundItem.java" %}
+```java
+public class SoundItem {
+    String title;
+
+    public SoundItem(String title) {
+        this.title = title;
+    }
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -165,22 +181,6 @@ Item 의 레이아웃 형태가 다른경우에는 새로운 ViewHolder를 생�
 
 onCreateViewHolder, onBindViewHolder 에서 따로 처리를 해줄 수 있다. 
 {% endhint %}
-
-### 아이템 정의 
-
-{% code-tabs %}
-{% code-tabs-item title="SoundItem.java" %}
-```java
-public class SoundItem {
-    String title;
-
-    public SoundItem(String title) {
-        this.title = title;
-    }
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 {% embed url="https://academy.realm.io/kr/posts/gotocph-israel-ferrer-camacho-android-ui/" %}
 
