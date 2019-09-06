@@ -1,10 +1,10 @@
 # AWS Lambda + DynamoDB
 
-## 기본
+## 시작 
 
 1\) AWS Management Console 로그인
 
-## 데이터베이스 설계
+## DynamoDB
 
 ### 1\) 테이블 생성 
 
