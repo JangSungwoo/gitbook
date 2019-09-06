@@ -27,21 +27,32 @@
 
 * Role 탭에서 Create Role 클릭 
 
-### 2-1\) type 설정 
+#### 2-1\) type 설정 
 
 * AWS Service 
 
-### 2-2\) 해당 Role를 사용할 서비스 선택 
+#### **2-2\) 해당 Role를 사용할 서비스 선택** 
 
 *  Lambda선택 후 Next: Permission 클릭
 
-### 3\) Attach permissions policies 설정  
+#### 2-3\) Attach permissions policies 설정  
 
 AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭 
 
-4\) Key 입력 Key입력은 패스
+#### 2-4\) Tag 입력 
 
-5\) Review에서 RoleName 입력\(LambdaDynamoDBRole\) Create Role 선택 생성한 Role선택후 create inline policy \(인라인정책추가\) 클릭 생성한 Role의 Service에 DynamoDB 선택 Actions에 원하는 함수입력\(예제에서는 getItem, putItem 추가\) ARN 추가\(Table의 Overview탭에서 복사한거 붙여넣기\) 리뷰 정책 생성 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) Service에서 Lambda선택 지역확인
+* tag의 Key입력은 패스
+
+#### 2-5\) Review
+
+* RoleName 입력\(예제: LambdaDynamoDBRole\) 
+* Create Role 클릭 
+
+###  3\) 생성한 Role선택후 Add inline policy \(인라인정책추가\) 클릭 
+
+3-1\)생성한 Role의 Service에 DynamoDB 선택 
+
+Actions에 원하는 함수입력\(예제에서는 getItem, putItem 추가\) ARN 추가\(Table의 Overview탭에서 복사한거 붙여넣기\) 리뷰 정책 생성 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) Service에서 Lambda선택 지역확인
 
 ## get함수 만들기
 
