@@ -6,7 +6,14 @@
 
 ## 데이터베이스 설계
 
-1\) 테이블 생성 서비스 찾기에서 DynamoDB 선택 지역선택 Create table 선택 TableName, PrimaryKey 입력 \(Users, id\) 2\) 레코드 추가 Item\(항목\)탭 클릭후 레코드 추가 \(예제에서는 id, firstname, lastname 입력함\)
+### 1\) 테이블 생성 
+
+* 서비스 찾기에서 DynamoDB 선택 
+* 지역선택 
+* Create table 선택 
+* TableName, PrimaryKey 입력 \(예제 : Users, id\) 
+
+### 2\) 레코드 추가 Item\(항목\)탭 클릭후 레코드 추가 \(예제에서는 id, firstname, lastname 입력함\)
 
 ## 권한 정책 설정
 
