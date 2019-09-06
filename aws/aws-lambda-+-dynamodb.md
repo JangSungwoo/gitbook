@@ -25,7 +25,7 @@
 
 ### 2\) Role 설정 
 
-* Role 탭에서 Create Role 클
+* Role 탭에서 Create Role 클릭 
 
 ### 2-1\) type 설정 
 
@@ -33,13 +33,11 @@
 
 ### 2-2\) 해당 Role를 사용할 서비스 선택 
 
-*  Lambda선택 후 Next Permission 선택
+*  Lambda선택 후 Next: Permission 클릭
 
-### 3\) Attach permissions policies 설정 
+### 3\) Attach permissions policies 설정  
 
-AWSLambda Policy 선택 
-
-AWSLambdaBasicExecutionRole 체크후 다음
+AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭 
 
 4\) Key 입력 Key입력은 패스
 
