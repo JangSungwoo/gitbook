@@ -13,15 +13,33 @@
 * Create table 선택 
 * TableName, PrimaryKey 입력 \(예제 : Users, id\) 
 
-### 2\) 레코드 추가 Item\(항목\)탭 클릭후 레코드 추가 \(예제에서는 id, firstname, lastname 입력함\)
+### 2\) 레코드 추가 
+
+* Item\(항목\)탭 클릭후 레코드 추가 \(예제에서는 id, firstname, lastname 입력함\)
 
 ## 권한 정책 설정
 
-1\) IAM 서비스 사용 서비스에서 IAM\(Identity and Access Management\)선택
+### 1\) IAM 서비스 사용 
 
-2\) Role 설정 2-1\) type 설정 AWS Service 2-2\) 해당 Role를 사용할 서비스 선택 Role 탭에서 Create Role 선택 Lambda선택 후 Next Permission 선택
+* 서비스에서 IAM\(Identity and Access Management\)선택
 
-3\) Policy 설정 AWSLambda Policy 선택 AWSLambdaBasicExecutionRole 체크후 다음
+### 2\) Role 설정 
+
+* Role 탭에서 Create Role 클
+
+### 2-1\) type 설정 
+
+* AWS Service 
+
+### 2-2\) 해당 Role를 사용할 서비스 선택 
+
+*  Lambda선택 후 Next Permission 선택
+
+### 3\) Attach permissions policies 설정 
+
+AWSLambda Policy 선택 
+
+AWSLambdaBasicExecutionRole 체크후 다음
 
 4\) Key 입력 Key입력은 패스
 
