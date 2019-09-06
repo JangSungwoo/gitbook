@@ -2,9 +2,9 @@
 
 ## 시작 
 
-1\) AWS Management Console 로그인
+### 1\) AWS Management Console 로그인
 
-## DynamoDB
+## 데이터베이스 구축 \(DynamoDB\)
 
 ### 1\) 테이블 생성 
 
@@ -17,7 +17,7 @@
 
 * Item\(항목\)탭 클릭후 레코드 추가 \(예제에서는 id, firstname, lastname 입력함\)
 
-## 권한 정책 설정
+## 권한 정책 설정\(IAM\)
 
 ### 1\) IAM 서비스 사용 
 
@@ -46,7 +46,8 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 #### 2-5\) Review
 
 * RoleName 입력\(예제: LambdaDynamoDBRole\) 
-* Create Role 클릭 
+
+#### 2-6\) Create Role 클릭 
 
 ### 3\) 생성한 Role의 policy 설정 
 
@@ -60,15 +61,19 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 
 * ARN 추가\(Table의 Overview탭의 ARN 복사하여 붙여넣기\) 
 
+#### 3-5\) Review policy 
+
 ### 4\) Review policy 
 
 #### 4-1\) 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) 
 
-#### 4-2\) Create policy 클릭 
+#### 4-2\) Create policy 클릭  
 
 ## AWS Lambda
 
-Service에서 Lambda선택 지역확인
+Service에서 Lambda선택 
+
+지역확인
 
 ## get함수 만들기
 
