@@ -48,11 +48,19 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 * RoleName 입력\(예제: LambdaDynamoDBRole\) 
 * Create Role 클릭 
 
-###  3\) 생성한 Role선택후 Add inline policy \(인라인정책추가\) 클릭 
+### 3\) 생성한 Role의 policy 설정 
 
-3-1\)생성한 Role의 Service에 DynamoDB 선택 
+#### 3-1\) 생성한 Role선택후 Add inline policy \(인라인정책추가\) 클릭  
 
-Actions에 원하는 함수입력\(예제에서는 getItem, putItem 추가\) ARN 추가\(Table의 Overview탭에서 복사한거 붙여넣기\) 리뷰 정책 생성 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) Service에서 Lambda선택 지역확인
+#### 3-2\) Visual editor 의 Service에 DynamoDB 검색 후 선택 
+
+#### 3-3\) Actions에 원하는 함수입력\(예제 :  GetItem, PutItem 추가\)   
+
+#### 3-4\) Resources의 table 설정 
+
+* ARN 추가\(Table의 Overview탭의 ARN 복사하여 붙여넣기\) 
+
+#### 리뷰 정책 생성 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) Service에서 Lambda선택 지역확인
 
 ## get함수 만들기
 
