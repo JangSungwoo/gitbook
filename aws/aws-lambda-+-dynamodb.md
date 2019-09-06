@@ -83,7 +83,18 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 
 ### 3\) get함수 생성 
 
-Create Function 클릭 함수명 \(예제 getUserData \) Runtime \(예제 Node.js 최신버전 \) Role\(이전에 생성한 기존 Role 사용\) Select a test event 추가 이벤트명 : 함수명과동일하게 index.js 에 get 소스코드 추가 저장후 테스트 응답확인
+#### 3-1\) Create Function 클릭 
+
+* 함수명 \(예제 : getUserData \)
+* Runtime \(예제 Node.js 최신버전 \) 
+
+Role\(이전에 생성한 기존 Role 사용\) 
+
+Select a test event 추가 
+
+이벤트명 : 함수명과동일하게 
+
+index.js 에 get 소스코드 추가 저장후 테스트 응답확인
 
 ### 4\) put함수 생성 
 
