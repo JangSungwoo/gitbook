@@ -56,11 +56,19 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 
 #### 3-3\) Actions에 원하는 함수입력\(예제 :  GetItem, PutItem 추가\)   
 
-#### 3-4\) Resources의 table 설정 
+#### 3-4\) Resources의 table을 위한정보 설정 
 
 * ARN 추가\(Table의 Overview탭의 ARN 복사하여 붙여넣기\) 
 
-#### 리뷰 정책 생성 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) Service에서 Lambda선택 지역확인
+### 4\) Review policy 
+
+#### 4-1\) 리뷰 정책명 \(예제에서는 DynamoReadWriteAccess \) 
+
+#### 4-2\) Create policy 클릭 
+
+## AWS Lambda
+
+Service에서 Lambda선택 지역확인
 
 ## get함수 만들기
 
