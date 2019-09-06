@@ -96,7 +96,36 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 * 이벤트명 : 함수명과동일하게 
 * index.js 에 get 소스코드 추가 저장후 테스트 응답확인
 
-### 4\) get함수 생성 
+{% code-tabs %}
+{% code-tabs-item title="index.js" %}
+```javascript
+'use strict'
+const AWS = require('aws-sdk');
+
+AWS.config.update({region: "us-east-2"});
+exports.handler = async (event, context) => {
+    const ddb = new AWS.DynamoDB({ apiVersion: "2012-10-08"});
+    const documentClient = new AWS.DynamoDB.DocumentClient({ region: "us-east-2"});
+
+    const params = {
+        TableName: "Users",
+        Key: {
+            id: "12345"
+        }
+    }
+
+    try{
+        const data = await documentClient.get(params).promise();
+        console.log(data);
+    }catch(err){
+        console.log(err);
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### 4\) put함수 생성 
 
 #### 4-1\) Create Function 클릭 
 
@@ -110,4 +139,35 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 
 * 이벤트명 : 함수명과동일하게 
 * index.js 에 put 소스코드 추가 저장후 테스트 응답확인
+
+{% code-tabs %}
+{% code-tabs-item title="index.js" %}
+```javascript
+'use strict'
+const AWS = require('aws-sdk');
+
+AWS.config.update({region: "us-east-2"});
+exports.handler = async (event, context) => {
+    const ddb = new AWS.DynamoDB({ region: "us-east-2"});
+    const documentClient = new AWS.DynamoDB.DocumentClient({ service: ddb});
+
+    const params = {
+        TableName: "Users",
+        Item: {
+            id: "45678",
+            firstname: "Jennifer",
+            lastname: "White"
+        }
+    }
+
+    try{
+        const data = await documentClient.put(params).promise();
+        console.log(data);
+    }catch(err){
+        console.log(err);
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
