@@ -1,5 +1,9 @@
 # AWS Lambda + DynamoDB
 
+{% embed url="https://www.youtube.com/watch?v=ijyeE-pXFk0" %}
+
+위의 강의를 기반으로 작성되었습니다. 
+
 ## 시작 
 
 ### 1\) AWS Management Console 로그인
