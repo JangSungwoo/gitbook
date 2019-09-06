@@ -184,6 +184,8 @@ onCreateViewHolder, onBindViewHolder 에서 따로 처리를 해줄 수 있다.
 
 {% embed url="https://academy.realm.io/kr/posts/gotocph-israel-ferrer-camacho-android-ui/" %}
 
+{% embed url="https://academy.realm.io/kr/posts/android-recycler-view/" %}
+
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/20492/" %}
 
 
