@@ -1,4 +1,4 @@
-# AWS Lambda + DynamoDB
+# AWS \(Lambda + DynamoDB\)
 
 {% embed url="https://www.youtube.com/watch?v=ijyeE-pXFk0" %}
 

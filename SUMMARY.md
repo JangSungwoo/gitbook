@@ -99,7 +99,8 @@
 
 ## AWS
 
-* [AWS Lambda + DynamoDB](aws/aws-lambda-+-dynamodb.md)
+* [AWS \(Lambda + DynamoDB\)](aws/aws-lambda-+-dynamodb.md)
+* [AWS\(API Gateway + Lambda + DynamoDB\)](aws/aws-api-gateway-+-lambda-+-dynamodb.md)
 
 ## Winform
 
