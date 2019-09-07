@@ -3,13 +3,15 @@
 ### RecyclerView의 아이템 RadioButton 클릭
 
 ```java
-recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-    @Override
-    public void onGlobalLayout() {
-        View itemView = recyclerView.getChildAt(position);
-        SoundAdapter.ViewHolder holder = (SoundAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
-        holder.getRadioBtnSoundItem().setChecked(true);
+public void selectSoundItem(final int position) {
+        recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                View itemView = recyclerView.getChildAt(position);
+                SoundAdapter.ViewHolder holder = (SoundAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+                holder.getRadioBtnSoundItem().setChecked(true);
+            }
+        });
     }
-});
 ```
 
