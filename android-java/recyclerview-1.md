@@ -7,11 +7,32 @@ public void selectSoundItem(final int position) {
         recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                View itemView = recyclerView.getChildAt(position);
                 SoundAdapter.ViewHolder holder = (SoundAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
-                holder.getRadioBtnSoundItem().setChecked(true);
+
+                if (holder != null) {
+                    holder.radioBtnSoundItem.setChecked(true);
+                    holder.changeCheckedPosition();
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                }
             }
         });
     }
 ```
+
+
+
+{% code-tabs %}
+{% code-tabs-item title="SoundAdapter.java" %}
+```java
+public void changeCheckedPosition(){
+    if (checkedPosition != getAdapterPosition()) {
+        notifyItemChanged(checkedPosition);
+        checkedPosition = getAdapterPosition();
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
