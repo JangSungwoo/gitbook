@@ -85,6 +85,7 @@
 * [Storage music 가져오기](android-java/storage-music.md)
 * [RecyclerView의 특정아이템 설정하는방법](android-java/recyclerview-1.md)
 * [Button Text 소문자](android-java/button-text.md)
+* [View disable 하는법](android-java/view-disable.md)
 
 ## Android-Kotlin
 
