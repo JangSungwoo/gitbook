@@ -10,3 +10,7 @@ if(a.equals(b)) //a와 b의 문자열을 계산
 if(a == b) // a와 b의 주소값을 계싼
 ```
 
+## 문자열 배열 연결
+
+arraycopy
+
