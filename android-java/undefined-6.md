@@ -38,7 +38,7 @@ protected void onPause() {
 
     SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
     SharedPreferences.Editor editor = pref.edit();
-    editor.putString("name", "안드로이");
+    editor.putString("name", "안드로이드");
     editor.commit();
 }
 @Override
