@@ -42,11 +42,20 @@ public class RepeatDialogFragment extends DialogFragment {
 
 ```text
 private void showCaseView() {
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    ShowcaseViewDialogFragment newFragment = new ShowcaseViewDialogFragment();
-    newFragment.setStyle(ShowcaseViewDialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
-    newFragment.setStyle(ShowcaseViewDialogFragment.STYLE_NO_FRAME, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
-    newFragment.show(fragmentManager, "dialog");
-}
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ShowcaseViewDialogFragment newFragment = new ShowcaseViewDialogFragment();
+        newFragment.setStyle(ShowcaseViewDialogFragment.STYLE_NO_TITLE, R.style.MyFullSizeDialog);
+        newFragment.show(fragmentManager, "dialog");
+    }
+```
+
+
+
+```text
+<style name="MyFullSizeDialog" parent="Theme.AppCompat.Light.DialogWhenLarge">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowMinWidthMajor">100%</item>
+    <item name="android:backgroundDimEnabled">true</item>
+</style>
 ```
 
