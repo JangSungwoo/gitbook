@@ -38,3 +38,15 @@ public class RepeatDialogFragment extends DialogFragment {
 }
 ```
 
+## 화면사이즈로 
+
+```text
+private void showCaseView() {
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    ShowcaseViewDialogFragment newFragment = new ShowcaseViewDialogFragment();
+    newFragment.setStyle(ShowcaseViewDialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
+    newFragment.setStyle(ShowcaseViewDialogFragment.STYLE_NO_FRAME, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
+    newFragment.show(fragmentManager, "dialog");
+}
+```
+
