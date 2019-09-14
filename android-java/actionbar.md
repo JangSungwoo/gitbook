@@ -177,6 +177,13 @@ actionBar.hide();
 | DISPLAY\_HOME\_AS\_UP | 홈 아이콘에 뒤로가기 모양의 &lt; 아이콘을 같이 표시합니다. |
 | DISPLAY\_SHOW\_TITLE | 타이틀을 표시하도록 합니다.  |
 
+### actionlayout의 view에 접근하는방법 
+
+```text
+LinearLayout linearLayout = (LinearLayout) menu.findItem(R.id.action_sort_type).getActionView();
+ImageButton btnAnimation = linearLayout.findViewById(R.id.imgbtn_sort_type);
+```
+
 {% embed url="https://developer.android.com/guide/topics/ui/menus.html?hl=ko" %}
 
 {% embed url="https://developer.android.com/training/appbar/index.html?hl=ko" %}
