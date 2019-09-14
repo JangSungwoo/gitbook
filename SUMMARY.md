@@ -88,6 +88,7 @@
 * [View disable 하는법](android-java/view-disable.md)
 * [Java 문자열](android-java/java.md)
 * [Localization](android-java/untitled-4.md)
+* [font](android-java/font.md)
 
 ## Android-Kotlin
 
