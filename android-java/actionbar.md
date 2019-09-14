@@ -184,7 +184,24 @@ LinearLayout linearLayout = (LinearLayout) menu.findItem(R.id.action_sort_type).
 ImageButton btnAnimation = linearLayout.findViewById(R.id.imgbtn_sort_type);
 ```
 
-{% embed url="https://developer.android.com/guide/topics/ui/menus.html?hl=ko" %}
+### Fragment안에서 Menu 숨기는방법 
+
+```java
+@Override
+public void onPrepareOptionsMenu(Menu menu) {
+    MenuItem item=menu.findItem(R.id.action_sort_type);
+    if(item!=null)
+        item.setVisible(false);
+}
+```
+
+```java
+@Nullable
+@Override
+public View onCreateView(...){
+    setHasOptionsMenu(true);
+}
+```
 
 {% embed url="https://developer.android.com/training/appbar/index.html?hl=ko" %}
 
