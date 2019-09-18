@@ -50,8 +50,7 @@ export class HomeScreen extends React.Component {
     title: 'Welcome',
   };
   render() {
-    const {navigate} = this.props.navigati
-on;
+    const {navigate} = this.props.navigation;
     return (
       <Button
         title="Go to the Profile"
@@ -76,9 +75,11 @@ export class ProfileScreen extends React.Component {
     title: 'Welcome',
   };
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <Button
         title="Back to the Home"
+        onPress={()=>navigate('Home')}
       />
     );
   }
