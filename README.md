@@ -19,8 +19,9 @@
 
 2019 
 
-* Xamarin Android 알람앱 배포경험
-* Java 안드로이드 학습중\(부스트코스 안드로이드\)
+* Xamarin Android 'Pinch' 알람앱 배포경험
+* 부스트코스 안드로이드 수료\(부스트코스 에이스\)
+* Java Android ''Pinch' 알람앱 재구현
 
 ![](.gitbook/assets/android_developers.png)
 
