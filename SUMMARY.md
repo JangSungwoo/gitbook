@@ -129,4 +129,5 @@
 * [Text](react-native/text.md)
 * [Image](react-native/image.md)
 * [Navigation](react-native/navigation.md)
+* [Sound](react-native/sound.md)
 
