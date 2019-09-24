@@ -130,4 +130,5 @@
 * [Image](react-native/image.md)
 * [Navigation](react-native/navigation.md)
 * [react-native-track-player](react-native/sound.md)
+* [Get Audio Files](react-native/get-audio-files.md)
 
