@@ -89,6 +89,7 @@
 * [Java 문자열](android-java/java.md)
 * [Localization](android-java/untitled-4.md)
 * [font](android-java/font.md)
+* [alarm 등록 확인](android-java/alarm.md)
 
 ## Android-Kotlin
 
