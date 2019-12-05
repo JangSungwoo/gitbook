@@ -13,8 +13,7 @@ description: '#부스트코스'
 
 ### 1\) 서비스 생성 
 
-{% code-tabs %}
-{% code-tabs-item title="MyService.java" %}
+{% code title="MyService.java" %}
 ```java
 public class MyService extends Service {
     private static final String TAG = "MyService";
@@ -74,19 +73,16 @@ public class MyService extends Service {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="AndriodManifest.xml" %}
+{% code title="AndriodManifest.xml" %}
 ```markup
 <service
             android:name=".MyService"
             android:enabled="true"
             android:exported="true"></service>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 서비스를 생성하면 AndroidManifest.xml 파일에 service 태그가 자동으로 등록된다.
 
@@ -108,8 +104,7 @@ onStartCommand 에서 이 값이 리턴되면 서비스가 종료되었을때 �
 
 ### 2\) `startService()` 를 사한 서비스 시작 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
     EditText edtData;
@@ -158,8 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 서비스를 호출할 때에는 `startService(intent)`를 통해 service 를 시작하거나 데이터를 전달할 때 사용한다. 
 

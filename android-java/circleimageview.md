@@ -4,8 +4,7 @@ description: '#부스트코스'
 
 # CircleImageView
 
-{% code-tabs %}
-{% code-tabs-item title="item\_view.xml" %}
+{% code title="item\_view.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -35,8 +34,7 @@ description: '#부스트코스'
     </LinearLayout>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 * de.hdodenhof.circleimageview.CircleImageView
 
@@ -45,8 +43,7 @@ description: '#부스트코스'
 
 
 
-  {% code-tabs %}
-  {% code-tabs-item title="build.gradle" %}
+  {% code title="build.gradle" %}
   ```text
   dependencies {
       implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -60,6 +57,5 @@ description: '#부스트코스'
 
   }
   ```
-  {% endcode-tabs-item %}
-  {% endcode-tabs %}
+  {% endcode %}
 

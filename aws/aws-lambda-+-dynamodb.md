@@ -96,8 +96,7 @@ AWSLambdaBasicExecutionRole 검색 및 체크 후 Next: Tag 클릭
 * 이벤트명 : 함수명과동일하게 
 * index.js 에 get 소스코드 추가 저장후 테스트 응답확인
 
-{% code-tabs %}
-{% code-tabs-item title="index.js" %}
+{% code title="index.js" %}
 ```javascript
 'use strict'
 const AWS = require('aws-sdk');
@@ -122,8 +121,7 @@ exports.handler = async (event, context) => {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 4\) put함수 생성 
 
@@ -140,8 +138,7 @@ exports.handler = async (event, context) => {
 * 이벤트명 : 함수명과동일하게 
 * index.js 에 put 소스코드 추가 저장후 테스트 응답확인
 
-{% code-tabs %}
-{% code-tabs-item title="index.js" %}
+{% code title="index.js" %}
 ```javascript
 'use strict'
 const AWS = require('aws-sdk');
@@ -168,6 +165,5 @@ exports.handler = async (event, context) => {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

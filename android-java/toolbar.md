@@ -4,8 +4,7 @@ drawer인경우 res &gt; menu 에서 설정을 한다.
 
 다음은 setting 버튼의 예시이다. 
 
-{% code-tabs %}
-{% code-tabs-item title="movie\_app\_drawer.xml" %}
+{% code title="movie\_app\_drawer.xml" %}
 ```markup
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -16,8 +15,7 @@ drawer인경우 res &gt; menu 에서 설정을 한다.
         app:showAsAction="never" />
 </menu>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

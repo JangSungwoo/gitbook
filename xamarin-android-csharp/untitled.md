@@ -2,8 +2,7 @@
 
 
 
-{% code-tabs %}
-{% code-tabs-item title="AlarmService.cs" %}
+{% code title="AlarmService.cs" %}
 ```csharp
 [Service(Name = "com.companyname.AlarmService", Exported = true)]
 public class AlarmService : Service
@@ -62,11 +61,9 @@ public class AlarmService : Service
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% code title="AndroidManifest.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname">
@@ -86,13 +83,11 @@ public class AlarmService : Service
 </manifest>
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
-{% code-tabs %}
-{% code-tabs-item title="Receiver.cs" %}
+{% code title="Receiver.cs" %}
 ```csharp
 [BroadcastReceiver(Enabled = true, Exported = true, DirectBootAware = true, Label = ".Receiver1")]
     public class Receiver1 : BroadcastReceiver
@@ -121,8 +116,7 @@ public class AlarmService : Service
     }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

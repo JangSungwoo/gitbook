@@ -166,8 +166,7 @@ protected void onCreate(Bundle savedInstanceState) {
 {% tab title="Focus" %}
 Focus 이벤트를 확인하기위해 EditText를 사용함.  예제에서는 EditText1의 background에 상태드로어블을 사용하여 Focus 일 경우 white, UnFocus 일 경우 holo\_blue\_bright 내었음. 
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
+{% code title="activity\_main.xml" %}
 ```markup
 <EditText
     android:layout_width="match_parent"
@@ -180,11 +179,9 @@ Focus 이벤트를 확인하기위해 EditText를 사용함.  예제에서는 Ed
     android:hint="EditText2"
     />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="selector1.xml" %}
+{% code title="selector1.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
@@ -196,8 +193,7 @@ Focus 이벤트를 확인하기위해 EditText를 사용함.  예제에서는 Ed
         android:drawable="@android:color/holo_blue_bright"/>
 </selector>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ![EditText\( Focus : white / UnFocus : holo\_blue\_bright\)](../.gitbook/assets/focusevent.gif)
 {% endtab %}
@@ -212,8 +208,7 @@ Focus 이벤트를 확인하기위해 EditText를 사용함.  예제에서는 Ed
 
 MainActivity.java 에 onConfiguationChanged를 재정의.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 @Override
 public void onConfigurationChanged(Configuration newConfig) {
@@ -227,20 +222,17 @@ public void onConfigurationChanged(Configuration newConfig) {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
   
 AndroidManifest.xml의 .MainActivity에 해당하는 activity의 configChanges 속성값을 설정
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% code title="AndroidManifest.xml" %}
 ```text
 <activity android:name=".MainActivity"
           android:configChanges="orientation|keyboardHidden">
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

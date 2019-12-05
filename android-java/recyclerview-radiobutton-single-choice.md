@@ -2,16 +2,14 @@
 
 ViewHolder 클래스 안에서  RadioButton 의 setOnClickListener 등록시 현재 선택한 RadioButton을 저장한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundAdapter.java" %}
+{% code title="SoundAdapter.java" %}
 ```java
 if (checkedPosition != getAdapterPosition()) {
    notifyItemChanged(checkedPosition);
    checkedPosition = getAdapterPosition();
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 notifyItemChanged 란? 
@@ -21,8 +19,7 @@ payload란?
 
 `ViewHolder`클래스 내부에서 bind 메소드를 구현한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundAdapter.java" %}
+{% code title="SoundAdapter.java" %}
 ```java
 public void bind(final SoundItem item) {
             if (checkedPosition == -1) {
@@ -36,13 +33,11 @@ public void bind(final SoundItem item) {
             }
         }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 `onBindViewHolder` 메소드에서 구현한 bind 메소드를 호출한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundAdapter.java" %}
+{% code title="SoundAdapter.java" %}
 ```java
 @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
@@ -55,13 +50,11 @@ public void bind(final SoundItem item) {
 
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 전체 소스 코드 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundAdapter.java" %}
+{% code title="SoundAdapter.java" %}
 ```java
 public class SoundAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Context context;
@@ -172,8 +165,7 @@ public class SoundAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% embed url="https://medium.com/@droidbyme/android-recyclerview-with-single-and-multiple-selection-5d50c0c4c739" %}
 

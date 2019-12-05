@@ -23,8 +23,7 @@ public void selectSoundItem(final int position) {
 
 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundAdapter.java" %}
+{% code title="SoundAdapter.java" %}
 ```java
 public void changeCheckedPosition(){
     if (checkedPosition != getAdapterPosition()) {
@@ -33,6 +32,5 @@ public void changeCheckedPosition(){
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

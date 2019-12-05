@@ -20,8 +20,7 @@ description: '#부스트코스'
 
 2\) menu\_main.xml 에서 원하는 menu를 추가한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="menu\_main.xml" %}
+{% code title="menu\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
@@ -46,13 +45,11 @@ description: '#부스트코스'
 </menu>
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
   3\) MainActivity 에서 `onCreateOptionsMenu` 를 재 정의 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,13 +57,11 @@ public boolean onCreateOptionsMenu(Menu menu) {
     return true;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 4\) 각 메뉴의 클릭 이벤트를 확인하기 위해서는 `onOptionsItemSelected` 를 재정의 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {
@@ -87,14 +82,12 @@ public boolean onOptionsItemSelected(MenuItem item) {
     return super.onOptionsItemSelected(item);
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 초기에 ActionBar 에 대한 설정은 res &gt; values &gt; style.xml 에 정의 되어있다. 
 
-{% code-tabs %}
-{% code-tabs-item title="style.xml" %}
+{% code title="style.xml" %}
 ```markup
 <resources>
 
@@ -108,29 +101,25 @@ public boolean onOptionsItemSelected(MenuItem item) {
 
 </resources>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 DarkActionBar를 NoActionBar로 변경하면 ActionBar가 안보이게 될 것이다. 
 
 MainActivity에서도 ActionBar를 숨기는 것이 가능하다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 ActionBar actionBar = getSupportActionBar();
 actionBar.hide();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endhint %}
 
 ### ActionBar에 레이아웃 사용하기 
 
 1\) 레이아웃 파일 search\_layout.xml 을 생성한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="search\_layout.xml" %}
+{% code title="search\_layout.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -152,8 +141,7 @@ actionBar.hide();
         android:layout_marginLeft="4dp" />
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 2\) menu\_main.xml 에 showAsAction에 withText를 추가하고 actionLayout을 설정한다. 
 

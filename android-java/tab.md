@@ -10,8 +10,7 @@ File &gt; Project Structure &gt; Dependencies &gt; + Library Dependency &gt; com
 
 ### **2\) activity\_main.xml 파일을 수정한다.** 
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
+{% code title="activity\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -62,8 +61,7 @@ File &gt; Project Structure &gt; Dependencies &gt; + Library Dependency &gt; com
 
 </RelativeLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 **레이아웃 구조**
 
@@ -100,8 +98,8 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
 
 ### **4\) 탭에서 사용할 fragment 파일을 생성한다.**
 
-{% code-tabs %}
-{% code-tabs-item title="Firstfragment.java" %}
+{% tabs %}
+{% tab title="Firstfragment.java" %}
 ```java
 public class FirstFragment extends Fragment {
     @Nullable
@@ -112,9 +110,9 @@ public class FirstFragment extends Fragment {
     }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="fragment\_first.xml" %}
+{% tab title="fragment\_first.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -137,13 +135,12 @@ public class FirstFragment extends Fragment {
         android:text="다음"/>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### 5\) MainActivity에 탭에 사용할 fragment를 선언한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -167,13 +164,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 6\) MainActivity의 onCreate 안에 TabLayout에 대한 설정을 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 TabLayout tabs = findViewById(R.id.tabs);
 tabs.addTab(tabs.newTab().setText("친구"));
@@ -206,8 +201,7 @@ tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
     }
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/tab.gif)
 

@@ -24,8 +24,8 @@ toast.show();
 
 **모양 변경 토스트**
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% tabs %}
+{% tab title="MainActivity.java" %}
 ```java
 LayoutInflater inflater = getLayoutInflater();
 View layout = inflater.inflate(R.layout.toastborder,(ViewGroup)findViewById(R.id.toast_layout_root));
@@ -37,9 +37,9 @@ toast.setDuration(Toast.LENGTH_LONG);//토스트 시간
 toast.setView(layout);//inflater로 설정된 layout를 toast의 View로 설정 
 toast.show();
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="toastborder.xml" %}
+{% tab title="toastborder.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -59,9 +59,9 @@ toast.show();
 </LinearLayout>
 
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="toast.xml" %}
+{% tab title="toast.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
@@ -83,8 +83,8 @@ toast.show();
 </shape>
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **스낵바** 
 

@@ -15,6 +15,7 @@ dependencies {
 
 ### 레이아웃 사용 
 
+{% code title="" %}
 ```markup
 <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/recycler_view_sound"
@@ -23,6 +24,7 @@ dependencies {
     android:paddingHorizontal="24dp"
     android:paddingVertical="16dp" />
 ```
+{% endcode %}
 
 ### RecyclerView 사용
 
@@ -34,8 +36,7 @@ dependencies {
 
 4\) adapter의 setOnItemClickListener를 사용하여 각 아이템의 클릭이벤트를 처리한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 RecyclerView recyclerView = findViewById(R.id.recycler_view_sound);
 
@@ -59,13 +60,11 @@ soundAdater.setOnItemClickListener(new SoundAdapter.OnItemClickListener() {
     }
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 아이템 정의 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundItem.java" %}
+{% code title="SoundItem.java" %}
 ```java
 public class SoundItem {
     String title;
@@ -75,8 +74,7 @@ public class SoundItem {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Adapter 구현 
 
@@ -85,8 +83,7 @@ public class SoundItem {
 
 RecyclerView는 Adapter를 ViewHolder 패턴을 사용하여 각각의 뷰를 뷰 홀더에 담아둔다. 
 
-{% code-tabs %}
-{% code-tabs-item title="SoundAdapter.java" %}
+{% code title="SoundAdapter.java" %}
 ```java
 public class SoundAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Context context;
@@ -173,8 +170,7 @@ public class SoundAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Item 의 레이아웃 형태가 다른경우에는 새로운 ViewHolder를 생성하고  

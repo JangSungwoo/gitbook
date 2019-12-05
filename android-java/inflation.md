@@ -23,8 +23,8 @@ XML레이아웃에는 버튼이 태그형식되어있고  버튼을 사용하기
 
 자바파일에서 부분화면을 구현해보자.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% tabs %}
+{% tab title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="activity\_main.xml" %}
+{% tab title="activity\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
     </FrameLayout>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="sub1.xml" %}
+{% tab title="sub1.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -106,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
 
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 1. 우선 부분화면을 구현하기 위해서는 FrameLayout을 사용하고 id를 설정해준다.
 2. findViewById 메소드로 FrameLayout의  id값에 해당하는 View를 가져온다.\(container\)

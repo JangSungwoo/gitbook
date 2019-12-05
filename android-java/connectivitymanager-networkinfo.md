@@ -12,28 +12,23 @@ description: '#부스트코스'
 
 ### ConnectivityManager 객체 생성
 
-{% code-tabs %}
-{% code-tabs-item title="NetworkStatus.java" %}
+{% code title="NetworkStatus.java" %}
 ```java
 ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 네트워크 정보 가져오기 
 
-{% code-tabs %}
-{% code-tabs-item title="NetworkStatus.java" %}
+{% code title="NetworkStatus.java" %}
 ```java
 NetworkInfo networkInfo = manager.getActiveNetworkInfo();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 네트워크 타입 리턴
 
-{% code-tabs %}
-{% code-tabs-item title="NetworkStatus.java" %}
+{% code title="NetworkStatus.java" %}
 ```java
 if(networkInfo !=null){
             int type = networkInfo.getType();
@@ -45,13 +40,11 @@ if(networkInfo !=null){
         }
         return TYPE_NOT_CONNECTED;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 전체 소스 코드 
 
-{% code-tabs %}
-{% code-tabs-item title="NetworkStatus.java" %}
+{% code title="NetworkStatus.java" %}
 ```java
 public class NetworkStatus {
     public static final int TYPE_WIFI = 1;
@@ -72,8 +65,7 @@ public class NetworkStatus {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/20491/" %}
 

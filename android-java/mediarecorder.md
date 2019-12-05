@@ -11,8 +11,7 @@ description: '#부스트코스'
 * setAudioEncoder : encoding 방식 
 * setOutputFile : 녹음을 저장할 파일 경로 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void startRecordAudio() {
         recorder = new MediaRecorder();
@@ -29,13 +28,11 @@ private void startRecordAudio() {
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### AudioRecord 정지 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void stopRecordAudio() {
         if (recorder != null) {
@@ -46,13 +43,11 @@ private void stopRecordAudio() {
         }
     }    
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### MediaPlayer 관련 메소드  
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
     private void stopMusic() {
 
@@ -102,23 +97,19 @@ private void stopRecordAudio() {
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## 권한 부여 
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% code title="AndroidManifest.xml" %}
 ```markup
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>roid
 <uses-permission android:name="android.permission.RECORD_AUDIO" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivitiy.java" %}
+{% code title="MainActivitiy.java" %}
 ```java
 String[] permissions = {
         Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -129,11 +120,9 @@ initPermission(permissions,REQUEST_CODE_READ_EXTERNAL_STORAGE);
 initPermission(permissions,REQUEST_CODE_WRITE_EXTERNAL_STORAGE);
 initPermission(permissions,REQUEST_CODE_RECORD_AUDIO);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void initPermission(String[] permissions, int requestCode) {
             //Manifest의 권한 확인
@@ -194,8 +183,7 @@ private void initPermission(String[] permissions, int requestCode) {
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17106/" %}
 

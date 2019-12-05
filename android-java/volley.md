@@ -25,31 +25,26 @@ description: '#부스트코스'
 
 ### 1\) build.gradle 에 라이브러리 등록 
 
-{% code-tabs %}
-{% code-tabs-item title="build.gradle" %}
+{% code title="build.gradle" %}
 ```text
 dependencies {
     ...
     implementation 'com.android.volley:volley:1.1.0'
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 2\) INTERNET 권한 설정 
 
-{% code-tabs %}
-{% code-tabs-item title="Android.Manifest.xml" %}
+{% code title="Android.Manifest.xml" %}
 ```markup
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 3\) static 사용 변수 선언\(RequestQueue, request 관련정보\)
 
-{% code-tabs %}
-{% code-tabs-item title="AppHelper.java" %}
+{% code title="AppHelper.java" %}
 ```java
 public class AppHelper {
     public static RequestQueue requestQueue;
@@ -57,20 +52,17 @@ public class AppHelper {
     public static int port = 10000;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 4\) requestQueue 선언 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 if(AppHelper.requestQueue == null){
        AppHelper.requestQueue = Volley.newRequestQueue(getApplicationContext());
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 5\) StringRequest를 사용한 request 생성 및 추가 
 
@@ -83,8 +75,7 @@ StringRequest 는 다음과 같은 정보를 통해 request를 생성한다.
 
 #### **GET**
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public void sendRequest() {
         String url = "http://www.google.co.kr";
@@ -117,8 +108,7 @@ public void sendRequest() {
         AppHelper.requestQueue.add(request);
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### POST 
 
@@ -126,8 +116,7 @@ public void sendRequest() {
 
  `getParams`에서 `put`메소드를 사용하여 데이터를 저장한 후 `params`를 리턴하여 서버에 데이터가 적용된다.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void requestWriteComment() {
         String url = "http://" + AppHelper.host + ":" + AppHelper.port + "/movie/createComment";
@@ -162,8 +151,7 @@ private void requestWriteComment() {
         AppHelper.requestQueue.add(request);
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 POST Request를 요청하였다면 [영화한줄평리스트](http://boostcourse-appapi.connect.or.kr:10000/movie/readCommentList?id=3) 에서 업데이트 결과를 확인할 수 있다.
 

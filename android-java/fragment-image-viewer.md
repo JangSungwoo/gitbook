@@ -30,8 +30,8 @@ description: '#부스트코스'
 
 ![](../.gitbook/assets/fragment_image_viewer.png)
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
+{% tabs %}
+{% tab title="activity\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -55,9 +55,9 @@ description: '#부스트코스'
         android:layout_weight="1" />
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="MainActivity.java" %}
+{% tab title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -85,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="fragment\_viewer.xml" %}
+{% tabs %}
+{% tab title="fragment\_viewer.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="ViewerFragment.java" %}
+{% tab title="ViewerFragment.java" %}
 ```java
 public class ViewerFragment extends Fragment {
 
@@ -132,11 +132,11 @@ public class ViewerFragment extends Fragment {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="fragment\_list.xml" %}
+{% tabs %}
+{% tab title="fragment\_list.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -164,9 +164,9 @@ public class ViewerFragment extends Fragment {
 
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="ListFragment.java" %}
+{% tab title="ListFragment.java" %}
 ```java
 public class ListFragment extends Fragment {
 
@@ -209,8 +209,8 @@ public class ListFragment extends Fragment {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![](../.gitbook/assets/fragment_image_viewer.gif)
 

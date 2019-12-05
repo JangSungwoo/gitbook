@@ -20,8 +20,7 @@ description: '#부스트코스'
 
 * onInBackground의 작업이 완료되면 호출 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
     ProgressBar progressTest;
@@ -77,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% embed url="https://developer.android.com/guide/components/processes-and-threads.html" %}
 

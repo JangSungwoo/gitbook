@@ -38,8 +38,7 @@ okhttp, volley, retrofit 을 사용하면 간단하게 웹으로 요청이 가�
 
 6\) 통신이 완료되었다면 BufferedReader 와 HttpURLConnection를  close한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 class RequestThread extends Thread {
         public void run() {
@@ -77,19 +76,16 @@ class RequestThread extends Thread {
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 요청 스레드 시작
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 RequestThread thread = new RequestThread();
                 thread.start();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 권한 부여 
 
@@ -99,8 +95,7 @@ RequestThread thread = new RequestThread();
 
 ### 전체 소스코드
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
     EditText edtUrl;
@@ -172,8 +167,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% embed url="https://developer.android.com/training/basics/network-ops/connecting.html" %}
 

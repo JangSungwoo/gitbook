@@ -14,8 +14,7 @@ description: '#부스트코스'
 
 3\) onPostExcute 메소드에서는 메인스레드에서 이미지 뷰에 표시를 하도록 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="ImagLoadTask.java" %}
+{% code title="ImagLoadTask.java" %}
 ```java
 public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
 
@@ -73,8 +72,7 @@ public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 권한 부여 
 
@@ -86,14 +84,12 @@ public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> {
 
 이미지 주소와 ImageView 를 AsyncTask 클래스의 인자로 넘겨주어 설정을 하고 이미지를 띄운다.  
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 ImageLoadTask task = new ImageLoadTask(movieList.result.get(0).image, imgMoviePoster);
 task.execute();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 비트맵 객체의 메모리 해제
 
@@ -105,26 +101,21 @@ task.execute();
 
 1\) HashMap 객체를 만들고 이미지의 주소와 비트맵 객체와 매핑이 되도록 해준다. 
 
-{% code-tabs %}
-{% code-tabs-item title="ImagLoadTask.java" %}
+{% code title="ImagLoadTask.java" %}
 ```java
 private static HashMap<String, Bitmap> bitmapHashMap = new HashMap<String, Bitmap>();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="ImagLoadTask.java" %}
+{% code title="ImagLoadTask.java" %}
 ```java
 bitmapHashMap.put(urlStr,bitmap);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 2\) 동일한 주소로 요청하는 경우 이전에 만들었던 비트맵 객체를 해제한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="ImagLoadTask.java" %}
+{% code title="ImagLoadTask.java" %}
 ```java
 if(bitmapHashMap.containsKey(urlStr)){
         Bitmap oldBitmap = bitmapHashMap.remove(urlStr);
@@ -134,8 +125,7 @@ if(bitmapHashMap.containsKey(urlStr)){
         }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

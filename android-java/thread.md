@@ -33,8 +33,7 @@ class BackgroundThread extends Thread{
 
 ## 스레드를 사용한 카운팅 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
     TextView txtThreadValue;
@@ -82,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="warning" %}
 다음과 같이 메인스레드가 아닌 스레드에서 UI를 변경할 경우 에러가 발생해야 한다. 
@@ -114,8 +112,7 @@ public class MainActivity extends AppCompatActivity {
 * 메소드에 정의된 기능이 수행됨 
 * 코드가 수행되는 위치는 새로 만든 스레드가 아닌 메인스레드에서 수행됨 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
     TextView txtThreadValue;
@@ -181,8 +178,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 위의 코드와 같이 
 

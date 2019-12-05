@@ -40,8 +40,7 @@ description: '#부스트코스'
 
 5\) 통신이 종료되었으므로 소켓을 종료한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="ServerThread.java" %}
+{% code title="ServerThread.java" %}
 ```java
 class ServerThread extends Thread {
     public void run() {
@@ -73,19 +72,16 @@ class ServerThread extends Thread {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 서버 시작 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 ServerThread thread = new ServerThread();
 thread.start();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 클라이언트 생성
 
@@ -97,8 +93,7 @@ thread.start();
 
 4\) 받은 데이터는 `handler`를 사용하여 UI 의 정보 변경한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="ClientThread.java" %}
+{% code title="ClientThread.java" %}
 ```java
  class ClientThread extends Thread{
         public void run(){
@@ -131,19 +126,16 @@ thread.start();
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 클라이언트 시작 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 ClientThread clientThread = new ClientThread();
 clientThread.start();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 권한 부여 
 
@@ -157,8 +149,7 @@ clientThread.start();
 
 서비스에서 서버시작을 하여 앱이 종료되었을때에도 서버가 종료되지 않도록 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="ChatService.java" %}
+{% code title="ChatService.java" %}
 ```java
 public class ChatService extends Service {
     @Override
@@ -203,23 +194,19 @@ public class ChatService extends Service {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 서비스 등록 
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% code title="AndroidManifest.xml" %}
 ```markup
 <service android:name=".ChatService" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 서비스 시작 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 Intent intent = new Intent(getApplicationContext(),ChatService.class);
 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ){
@@ -228,8 +215,7 @@ if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ){
     startService(intent);
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 안드로이드 Oreo 버전 이상에서는 백그라운드를 허용하지 않기 때문에 `startForgroundService(intent)`로 서비스를시작하고 push 알림을 띄우는`startForeground(1,builder.build())`를 사용하여 죽지 않는 서비스를 구현해야 한다. 

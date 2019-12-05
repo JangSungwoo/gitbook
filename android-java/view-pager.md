@@ -8,8 +8,7 @@ description: '#부스트코스'
 
 **1\) activity\_main 에 ViewPager를 추가한다.** 
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
+{% code title="activity\_main.xml" %}
 ```markup
 <android.support.v4.view.ViewPager
     android:id="@+id/pager"
@@ -20,13 +19,12 @@ description: '#부스트코스'
 
 </android.support.v4.view.ViewPager>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 **2\) 뷰 페이저에서 사용할 fragment를 생성한다. \(아래 코는 하나만 표현하였다.\)** 
 
-{% code-tabs %}
-{% code-tabs-item title="fragment1.xml" %}
+{% tabs %}
+{% tab title="fragment1.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -41,9 +39,9 @@ description: '#부스트코스'
         android:text="첫번째"/>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Fragment1.java" %}
+{% tab title="Fragment1.java" %}
 ```java
 public class Fragment1 extends Fragment {
     @Nullable
@@ -54,13 +52,12 @@ public class Fragment1 extends Fragment {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **3\) FragmentStatePagerAdapter를 상속한 어댑터를 생성한다.**  
 
-{% code-tabs %}
-{% code-tabs-item title="MoviePagerAdapter.java" %}
+{% code title="MoviePagerAdapter.java" %}
 ```java
 class MoviePagerAdapter extends FragmentStatePagerAdapter{
 
@@ -85,13 +82,11 @@ class MoviePagerAdapter extends FragmentStatePagerAdapter{
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 **4\) 어댑터를 선언하고 fragment를 추가 후 뷰페이저에 적용한다.**  
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 ViewPager pager = (ViewPager) findViewById(R.id.pager);
 pager.setOffscreenPageLimit(3);
@@ -109,8 +104,7 @@ adapter.addItem(fragment3);
 
 pager.setAdapter(adapter);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 `setOffscreenPageLimit` 는 미리 몇개를 그려놓을지 지정하는 것이다. 

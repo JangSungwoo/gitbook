@@ -14,8 +14,8 @@ description: '#부스트코스'
 
 numColumns는 열의 수를 지정하는것이다.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% tabs %}
+{% tab title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
    
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="FoodAdapter.java" %}
+{% tab title="FoodAdapter.java" %}
 ```java
  class FoodAdapter extends BaseAdapter {
         ArrayList<FoodItem> items = new ArrayList<FoodItem>();
@@ -106,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="food\_item.xml" %}
+{% tab title="food\_item.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -147,9 +147,9 @@ public class MainActivity extends AppCompatActivity {
     </LinearLayout>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="activity\_main.xml" %}
+{% tab title="activity\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -191,8 +191,8 @@ public class MainActivity extends AppCompatActivity {
 
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![](../.gitbook/assets/gridview.gif)
 

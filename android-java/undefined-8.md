@@ -44,8 +44,7 @@ description: '#부스트코스'
 
 ### 1\) 우선 BroadCastRecevier를 생성한다.
 
-{% code-tabs %}
-{% code-tabs-item title="SmsReceiver.java" %}
+{% code title="SmsReceiver.java" %}
 ```java
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsReceiver";
@@ -61,8 +60,7 @@ public class SmsReceiver extends BroadcastReceiver {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 intent-filter로 지정한 action을 비교하여 특정 인텐트만 처리할 수 있다.  
 
@@ -72,8 +70,7 @@ intent.getAction() =="android.provider.Telephony.SMS_RECEIVED"
 
 ### 2\) AndroidManifest 의 intent-filter에 action을 설정한다.
 
-{% code-tabs %}
-{% code-tabs-item title="AndroidManifest.xml" %}
+{% code title="AndroidManifest.xml" %}
 ```markup
 <receiver
     android:name=".SmsReceiver"
@@ -83,8 +80,7 @@ intent.getAction() =="android.provider.Telephony.SMS_RECEIVED"
     </intent-filter>
 </receiver>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 intent-filter 의 action을 통해 지정한 인텐트만 받겠다고 지정을 할 수 있다. 
 

@@ -10,16 +10,14 @@ description: '#부스트코스'
 
 #### VideoView 를 사용한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
+{% code title="activity\_main.xml" %}
 ```markup
 <VideoView
     android:id="@+id/videoView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 2\) 동영상 load
 
@@ -27,8 +25,7 @@ description: '#부스트코스'
 * setVideoURI : 파일위치 지정
 * requestFocus : 재생버튼 뷰를 요청한다.  
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void playVideo() {
     VideoView videoView = (VideoView) findViewById(R.id.videoView);
@@ -39,8 +36,7 @@ private void playVideo() {
     videoView.requestFocus();
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 3\) 동영상 재생 
 

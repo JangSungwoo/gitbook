@@ -35,8 +35,8 @@ putExtra\(\), putParcelableArrayListExtra\(\) 을 통해 데이터를 전달하�
 
 getIntExtra\(\), getStringExtra\(\), getSerializeableExtra\(\), getParcelableArrayListExtra\(\) 으로 데이터를 전달 받는다.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% tabs %}
+{% tab title="MainActivity.java" %}
 ```java
 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
 ArrayList<String> names = new ArrayList<String>();
@@ -48,9 +48,9 @@ SimpleData data = new SimpleData(100,"Hello");
 intent.putExtra("data",data);
 startActivityForResult(intent, 101);
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="MenuActivity.java" %}
+{% tab title="MenuActivity.java" %}
 ```java
 Intent passedIntent = getIntent();
 
@@ -71,13 +71,13 @@ private void processIntent(Intent intent) {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### 기본 자료형 데이터\(int, String, ...\)
 
-{% code-tabs %}
-{% code-tabs-item title="FirstActivity.java" %}
+{% tabs %}
+{% tab title="FirstActivity.java" %}
 ```java
 Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
 int number = 1;
@@ -85,21 +85,21 @@ String data = "Hello";
 intent.putExtra("number",number);
 intent.putExtra("data",data);
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="SecondActivity.java" %}
+{% tab title="SecondActivity.java" %}
 ```java
 Intent intent = getIntent();
 int count = intent.getIntExtra("number",0);
 String data = intent.getStringExtra("data");
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### ArrayList
 
-{% code-tabs %}
-{% code-tabs-item title="FirstActivity.java" %}
+{% tabs %}
+{% tab title="FirstActivity.java" %}
 ```java
 Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
 ArrayList<String> dataArrayList = new ArrayList<String>();
@@ -109,53 +109,53 @@ dataArrayList.add("C");
 
 intent.putExtra("dataArrayList",dataArrayList);
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="SecondActivity.java" %}
+{% tab title="SecondActivity.java" %}
 ```java
 Intent intent = getIntent();
 ArrayList<String> names = (ArrayList<String>) intent.getSerializableExtra("names");
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### 객체를 전달할 수 있는 Parcelable
 
-{% code-tabs %}
-{% code-tabs-item title="FirstActivity.java" %}
+{% tabs %}
+{% tab title="FirstActivity.java" %}
 ```java
 Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
 SimpleData data = new SimpleData();
 intent.putExtra("data",data);
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="SecondActivity.java" %}
+{% tab title="SecondActivity.java" %}
 ```java
 Intent intent = getIntent();
 SimpleData data = intent.getParcelableExtra("data");
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### ArrayList Parcelable
 
-{% code-tabs %}
-{% code-tabs-item title="FirstActivity.java" %}
+{% tabs %}
+{% tab title="FirstActivity.java" %}
 ```java
 Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
 ArrayList<SimpleData> simpleDataArrayList = new ArrayList<SimpleData>();
 intent.putParcelableArrayListExtra("simpleDataArrayList",simpleDataArrayList);
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="SecondActivity.java" %}
+{% tab title="SecondActivity.java" %}
 ```java
 Intent intent = getIntent();
 ArrayList<SimpleData> names = (ArrayList<SimpleData>) intent.getParcelableArrayListExtra("simpleDataArrayList");
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17066/" %}
 

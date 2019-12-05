@@ -93,8 +93,7 @@ description: '#부스트코스'
 
 권한이 여러개인경우 String\[\] 로 값을 넣어 `requestPermission()` 을 통해 넘겨준다.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 String[] permissions = {
         Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -105,8 +104,7 @@ initPermission(permissions,REQUEST_CODE_READ_EXTERNAL_STORAGE);
 initPermission(permissions,REQUEST_CODE_WRITE_EXTERNAL_STORAGE);
 initPermission(permissions,REQUEST_CODE_RECORD_AUDIO);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ```java
 private void initPermission(String[] permissions, int requestCode) {

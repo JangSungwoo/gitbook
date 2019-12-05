@@ -6,8 +6,7 @@ description: '#부스트코스'
 
 **1\) 내용을 넣고 싶은 위치에 FrameLayout 을 추가한다.** 
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main.xml" %}
+{% code title="activity\_main.xml" %}
 ```markup
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -57,13 +56,12 @@ description: '#부스트코스'
 </android.support.v4.widget.DrawerLayout>
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 **2\) fragment 설정** 
 
-{% code-tabs %}
-{% code-tabs-item title="fragment\_first.xml" %}
+{% tabs %}
+{% tab title="fragment\_first.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -79,9 +77,9 @@ description: '#부스트코스'
 
 </FrameLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="FirstFragment.java" %}
+{% tab title="FirstFragment.java" %}
 ```java
 public class firstFragment extends Fragment {
 
@@ -92,15 +90,14 @@ public class firstFragment extends Fragment {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **3\) Navigation Drawer의 head 및 view의 아이템을 설정** 
 
 기본값인경우 **프로필사진변경, 이름, 메일** 항목은 layout &gt; nav\_head\_main.xml 파일에서 수정한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="nav\_head\_main.xml" %}
+{% code title="nav\_head\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,13 +136,11 @@ public class firstFragment extends Fragment {
 
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Navigation view를 설정하기 위해서는 menu &gt; activity\_main\_drawer.xml에서 변경이 가능하다.  
 
-{% code-tabs %}
-{% code-tabs-item title="activity\_main\_drawer.xml" %}
+{% code title="activity\_main\_drawer.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
@@ -170,15 +165,13 @@ Navigation view를 설정하기 위해서는 menu &gt; activity\_main\_drawer.xm
 
 </menu>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 onNavigationItemSelected에서 item.getItemId\(\) 를 통해 선택된 아이템을 비교하여 클릭이벤트를 제어할 수 있다. 
 
 onFragmentSelected는 선택된 아이템에 해당하는 fragment를 FragmentManager를 통해 infalte 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 @SuppressWarnings("StatementWithEmptyBody")
 @Override
@@ -219,8 +212,7 @@ public boolean onNavigationItemSelected(MenuItem item) {
         getSupportFragmentManager().beginTransaction().replace(R.id.container,curFragment).commit();
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

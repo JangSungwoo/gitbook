@@ -14,8 +14,7 @@ description: '#부스트코스'
 
 ![&#xC544;&#xC774;&#xD15C; &#xB808;&#xC774;&#xC544;&#xC6C3;](../.gitbook/assets/image%20%2810%29.png)
 
-{% code-tabs %}
-{% code-tabs-item title="singer\_item.xml" %}
+{% code title="singer\_item.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -53,8 +52,7 @@ description: '#부스트코스'
     </LinearLayout>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
@@ -115,8 +113,8 @@ public class SingerItemView extends LinearLayout {
 
 리스트뷰의 데이터 관리를 위해서는 어댑터가 필요하다. 각 아이템을 속성들을 설정하기 위해서는 getView 메소드를 사용한다. 다음 예제에서는 name, mobile 속을 설정하고 있다. getView를 통해 반환된 view 값은 리스트뷰에서 setAdapter로 각 아이템을 표시할 때 적용된다.
 
-{% code-tabs %}
-{% code-tabs-item title="SingerAdapter.java" %}
+{% tabs %}
+{% tab title="SingerAdapter.java" %}
 ```java
  class SingerAdapter extends BaseAdapter{
         ArrayList<SingerItem> items = new ArrayList<SingerItem>();
@@ -154,9 +152,9 @@ public class SingerItemView extends LinearLayout {
         }
     }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="SingerItem" %}
+{% tab title="SingerItem" %}
 ```java
 public class SingerItem {
     String name;
@@ -201,8 +199,8 @@ public class SingerItem {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## 4\) 리스트뷰 정의
 
@@ -212,8 +210,7 @@ public class SingerItem {
 
 다음 예제는 아이템 클릭시 이름값을 토스트 메세지로 띄우고 아이템을 추가하는 소스코드이다.
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
     ListView listView = findViewById(R.id.listView);
 
@@ -249,8 +246,7 @@ public class SingerItem {
     });
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 아이템을 추가한 후 adapter.notifyDataSetChanged\(\); 를 사용해야만 리스트뷰가 갱신이 된다.

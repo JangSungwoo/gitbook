@@ -8,8 +8,7 @@ description: '#부스트코스'
 
 AlertDialog는 안내메세지를 대화상자 형태로 나타내준다. 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 AlertDialog.Builder builder = new AlertDialog.Builder(this);
 builder.setTitle("안내");
@@ -31,8 +30,7 @@ builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
 AlertDialog dialog = builder.create();
 dialog.show();
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 다음과 같은 속성으로 AlertDialog의 형태를 변경할 수 있다.
 

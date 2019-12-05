@@ -1,7 +1,6 @@
 # Navigation
 
-{% code-tabs %}
-{% code-tabs-item title="./App.js" %}
+{% code title="./App.js" %}
 ```javascript
 import React from 'react';
 import { StyleSheet, Text, View,Button } from 'react-native';
@@ -36,11 +35,9 @@ const styles = StyleSheet.create({
   },
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="./src/screens/HomeScreen.js" %}
+{% code title="./src/screens/HomeScreen.js" %}
 ```javascript
 import React from 'react';
 import { StyleSheet, Text, View,Button } from 'react-native';
@@ -60,11 +57,9 @@ export class HomeScreen extends React.Component {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="./src/screens/ProfileScreen.js" %}
+{% code title="./src/screens/ProfileScreen.js" %}
 ```javascript
 import React from 'react';
 import { 
@@ -93,8 +88,7 @@ const styles = StyleSheet.create({
   },
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

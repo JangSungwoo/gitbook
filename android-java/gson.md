@@ -14,28 +14,26 @@ Volley를 이용해 웹서버로부터 JSON 응답을 받았다면 Gson을 이�
 
 ### 라이브러리 참조
 
-{% code-tabs %}
-{% code-tabs-item title="build.gradle" %}
+{% code title="build.gradle" %}
 ```text
 implementation 'com.google.code.gson:gson:2.8.2'
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### JSON 문자열의 속성에 맞는 자바 클래스 정의 
 
 * JSON의 문자열에서 속성이 배열인경우 ArrayList 자료형으로 사용 
 
-{% code-tabs %}
-{% code-tabs-item title="MovieList.java" %}
+{% tabs %}
+{% tab title="MovieList.java" %}
 ```java
 public class MovieList {
     MovieListResult boxOfficeResult = new MovieListResult();
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="MovieListResult.java" %}
+{% tab title="MovieListResult.java" %}
 ```java
 public class MovieListResult {
     public String boxofficeType;
@@ -43,9 +41,9 @@ public class MovieListResult {
     public ArrayList<Movie> dailyBoxOfficeList = new ArrayList<>();
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Movie.java" %}
+{% tab title="Movie.java" %}
 ```java
 public class Movie {
     String rnum;
@@ -68,8 +66,8 @@ public class Movie {
     String showCnt;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Gson으로 변환 및 사용 
 

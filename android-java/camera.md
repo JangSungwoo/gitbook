@@ -8,28 +8,23 @@ description: '#부스트코스'
 
 Android 22 이하 인 경우 위험 권한 자동부여되지만 23이상 인경우 권한을 부여해주어야한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="Manifest.xml" %}
+{% code title="Manifest.xml" %}
 ```markup
 <uses-permission android:name="android.permission.CAMERA"/>
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
  initPermission(Manifest.permission.CAMERA, REQUEST_CODE_CAMERA);
  initPermission(Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_CODE_READ_EXTERNAL_STORAGE);
  initPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, REQUEST_CODE_WRITE_EXTERNAL_STORAGE);
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void initPermission(String permission, int RequestCode) {
         //Manifest의 권한 확인
@@ -86,13 +81,11 @@ private void initPermission(String permission, int RequestCode) {
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## 카메라앱 실행 후 캡쳐
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
@@ -101,11 +94,9 @@ if (intent.resolveActivity(getPackageManager()) != null) {
   startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 @Override
 protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -119,15 +110,13 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## 카메라 미리보기 및 캡쳐
 
 ### 사진 찍은 결과 보여주기  
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% code title="MainActivity.java" %}
 ```java
 private void capture() {
         sfvCapture.capture(new Camera.PictureCallback() {
@@ -144,23 +133,20 @@ private void capture() {
         });
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 미리보기를 위한 SurfaceView
 
 #### 1\) SufaceView를 제어할 holder를 가져오고 SurfaceHolder.Callback 을 추가 
 
-{% code-tabs %}
-{% code-tabs-item title="CameraSufaceView.java" %}
+{% code title="CameraSufaceView.java" %}
 ```java
 private void init() {
         holder = getHolder();
         holder.addCallback(this);
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### 2\)  SurfaceHolder.Callback의 메소 구현 
 
@@ -170,8 +156,7 @@ private void init() {
 
 카메라를 열고 미리보기 설정을 한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="CameraSufaceView.java" %}
+{% code title="CameraSufaceView.java" %}
 ```java
 //생성시 호출
     @Override
@@ -186,13 +171,11 @@ private void init() {
         }
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 미리보기를 시작한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="CameraSufaceView.java" %}
+{% code title="CameraSufaceView.java" %}
 ```java
 //변경시 호출
     @Override
@@ -201,13 +184,11 @@ private void init() {
 
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 종료시 미리보기를 종료하고 할당한 메모리를 해제한다. 
 
-{% code-tabs %}
-{% code-tabs-item title="CameraSufaceView.java" %}
+{% code title="CameraSufaceView.java" %}
 ```java
 //종료시 호출
     @Override
@@ -217,13 +198,12 @@ private void init() {
         camera = null;
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 전체 소스코드 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% tabs %}
+{% tab title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -328,9 +308,9 @@ public class MainActivity extends AppCompatActivity {
 
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="CameraSufaceView.java" %}
+{% tab title="CameraSufaceView.java" %}
 ```java
 public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
     SurfaceHolder holder;
@@ -389,8 +369,8 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://developer.android.com/guide/topics/media/camera.html" %}
 

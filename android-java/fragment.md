@@ -100,8 +100,8 @@ int index = getArguments().getParcelable("index");
 
 ## 예제 
 
-{% code-tabs %}
-{% code-tabs-item title="MainActivity.java" %}
+{% tabs %}
+{% tab title="MainActivity.java" %}
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -140,9 +140,9 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="MainFragment.java" %}
+{% tab title="MainFragment.java" %}
 ```java
 public class MainFragment extends Fragment {
 
@@ -176,9 +176,9 @@ public class MainFragment extends Fragment {
     }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="MenuFragment.java" %}
+{% tab title="MenuFragment.java" %}
 ```java
 public class MenuFragment extends Fragment {
     MainActivity activity;
@@ -212,9 +212,9 @@ public class MenuFragment extends Fragment {
     }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="activity\_main.xml" %}
+{% tab title="activity\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -253,9 +253,9 @@ public class MenuFragment extends Fragment {
 
 </RelativeLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="fragment\_main.xml" %}
+{% tab title="fragment\_main.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -277,9 +277,9 @@ public class MenuFragment extends Fragment {
         android:text="메뉴화면으로"/>
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="fragment\_menu.xml" %}
+{% tab title="fragment\_menu.xml" %}
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -300,8 +300,8 @@ public class MenuFragment extends Fragment {
         android:text="메인화면으로" />
 </LinearLayout>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ![](../.gitbook/assets/fragment.gif)
 
