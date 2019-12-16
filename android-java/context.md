@@ -10,7 +10,7 @@
 
 ### 애플리케이션 환경에 관한 전역정보?
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 위의 사진은 공식문서의 getApplicationContext\(\)에 대한 설명이다.
 

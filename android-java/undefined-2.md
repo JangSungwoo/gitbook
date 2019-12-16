@@ -16,7 +16,7 @@ description: '#부스트 코스'
 
 참조가 정상적으로 되었다면 build.gradle 파일에 다음과 같이 수정되어있을것이다. 
 
-![build.gradle](../.gitbook/assets/image%20%283%29.png)
+![build.gradle](../.gitbook/assets/image%20%285%29.png)
 
 {% embed url="https://www.edwith.org/boostcourse-android/lecture/17052/" %}
 

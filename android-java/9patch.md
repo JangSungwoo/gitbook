@@ -8,7 +8,7 @@ description: '#부스트코스'
 >
 > #### 이미지가 줄어들거나 늘어날때 이미지의 왜곡을 해결하는 방법
 
-![&#xC0AC;&#xC9C4;1 - 9Patch](../.gitbook/assets/image%20%2812%29.png)
+![&#xC0AC;&#xC9C4;1 - 9Patch](../.gitbook/assets/image%20%2815%29.png)
 
 ```text
 <Button
@@ -31,9 +31,9 @@ description: '#부스트코스'
 
 나인패치 이미지를 만드는 프로그램은 여러가지가 있겠지만 [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/nine-patches.html#&sourceDensity=320&name=example) 에서 만드는 법을 소개하겠다.\(Android Studio에서 9-Patch를 만드는 방법도 있지만 테스트 중 발생한 에러를 해결하지못하여 다음에 소개하겠다.\)
 
-![&#xC0AC;&#xC9C4; &#xBD88;&#xB7EC;&#xC624;&#xAE30;](../.gitbook/assets/image.png)
+![&#xC0AC;&#xC9C4; &#xBD88;&#xB7EC;&#xC624;&#xAE30;](../.gitbook/assets/image%20%281%29.png)
 
-위 사이트에서 변경을 원하는 이미지를 선택하고 ![](../.gitbook/assets/image%20%286%29.png)\(다운로드\) 버튼을 누르면 된다.
+위 사이트에서 변경을 원하는 이미지를 선택하고 ![](../.gitbook/assets/image%20%288%29.png)\(다운로드\) 버튼을 누르면 된다.
 
 다운로드 된 파일의 res안에 모든 폴를 복사하여 프로젝트 src &gt; app &gt; res 아래에 붙여넣기 해주면 된다. 
 {% endhint %}
