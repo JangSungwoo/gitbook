@@ -2,6 +2,8 @@
 
 CameraBridgeViewBase 파일을 수정해야한다.
 
+CameraBridgeViewBase의 생성자에 windowManager 서비스 구문을 추가해야 한다.
+
 ```java
 public CameraBridgeViewBase(Context context, int cameraId) {  
    super(context);  
