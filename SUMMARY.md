@@ -92,6 +92,7 @@
 * [alarm 등록 확인](android-java/alarm.md)
 * [---Android OpenCV 사용법](android-java/android-opencv.md)
 * [Android Opencv Preview 방향전환 문제](android-java/android-opencv-preview.md)
+* [System.loadLibrary\(\)](android-java/system.loadlibrary.md)
 
 ## Android-Kotlin
 
