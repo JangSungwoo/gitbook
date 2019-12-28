@@ -93,6 +93,7 @@
 * [---Android OpenCV 사용법](android-java/android-opencv.md)
 * [Android Opencv Preview 방향전환 문제](android-java/android-opencv-preview.md)
 * [System.loadLibrary\(\)](android-java/system.loadlibrary.md)
+* [MariaDB 설치](android-java/mariadb.md)
 
 ## Android-Kotlin
 
