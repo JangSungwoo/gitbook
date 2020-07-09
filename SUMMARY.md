@@ -93,7 +93,11 @@
 * [---Android OpenCV 사용법](android-java/android-opencv.md)
 * [Android Opencv Preview 방향전환 문제](android-java/android-opencv-preview.md)
 * [System.loadLibrary\(\)](android-java/system.loadlibrary.md)
-* [MariaDB 설치](android-java/mariadb.md)
+
+## SQL
+
+* [MariaDB 설치](sql/mariadb.md)
+* [Heidi 사용법](sql/heidi.md)
 
 ## Android-Kotlin
 
@@ -137,5 +141,8 @@
 * [react-native-track-player](react-native/sound.md)
 * [Get Audio Files](react-native/get-audio-files.md)
 * [Slider](react-native/slider.md)
+
+---
+
 * [Eclipse 단축키](eclipse.md)
 

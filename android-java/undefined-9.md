@@ -85,7 +85,9 @@ description: '#부스트코스'
       </td>
     </tr>
   </tbody>
-</table>## 위험 권한 부여 방법 
+</table>
+
+## 위험 권한 부여 방법 
 
 * ContextCompat.checkSelfPermission : 권한 부여 여부
 * ActivityCompat.shouldShowRequestPermissionRationale : 해당 권한 거부\(true\), 다시묻지않음 또는 기기에서 해당 권한 금지 시 false 반
