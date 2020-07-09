@@ -1,6 +1,10 @@
 # Dev-Jang
 
-![](.gitbook/assets/android_developers.png)
+![](.gitbook/assets/image%20%2818%29.png)
+
+2020
+
+* 1drop 모바일 헬스케어 iOS/android 앱 개발자 
 
 2019 
 
