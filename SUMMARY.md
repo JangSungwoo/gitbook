@@ -93,6 +93,7 @@
 * [---Android OpenCV 사용법](android-java/android-opencv.md)
 * [Android Opencv Preview 방향전환 문제](android-java/android-opencv-preview.md)
 * [System.loadLibrary\(\)](android-java/system.loadlibrary.md)
+* [다국어 지원방식](android-java/undefined-12.md)
 
 ## SQL
 
