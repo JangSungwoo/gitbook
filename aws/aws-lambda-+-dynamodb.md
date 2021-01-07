@@ -107,9 +107,9 @@ exports.handler = async (event, context) => {
     const documentClient = new AWS.DynamoDB.DocumentClient({ region: "us-east-2"});
 
     const params = {
-        TableName: "Users",
+        TableName: "Employee",
         Key: {
-            id: "12345"
+            id: 3
         }
     }
 
@@ -151,9 +151,9 @@ exports.handler = async (event, context) => {
     const params = {
         TableName: "Users",
         Item: {
-            id: "45678",
+            id: 3,
             firstname: "Jennifer",
-            lastname: "White"
+            lastname: "abc@abc.com"
         }
     }
 
@@ -166,4 +166,6 @@ exports.handler = async (event, context) => {
 }
 ```
 {% endcode %}
+
+
 
